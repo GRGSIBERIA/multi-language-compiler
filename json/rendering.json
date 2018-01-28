@@ -1,14 +1,50 @@
 {
     "Rendering": {
-
+        "extends": "Chunk",
+        "attributes": [
+            {
+                "name": "definitions",
+                "class": "Array",
+                "extends": "Definition"
+            },
+            {
+                "name": "textures",
+                "class": "Array",
+                "extends": "WString"
+            },
+            {
+                "name": "materials",
+                "class": "Array",
+                "extends": "Material"
+            }
+        ]
+    },
+    "Definition": {
+        "comments": [
+            "typeはcommon.jsonの順番に準拠",
+            "レンダラやシェーダの入力の名前とnameは対応させる"
+        ],
+        "attributes": [
+            {
+                "name": "name",
+                "class": "CString"
+            },
+            {
+               "name": "type",
+               "class": "Byte" 
+            }
+        ]
     },
     "Material": {
-
-    },
-    "PBRMaterial": {
-
-    },
-    "Texture": {
-        
+        "attributes": [
+            {
+                "name": "num_faces",
+                "class": "UInt"
+            },
+            {
+                "name": "using_definition",
+                "class": "Byte"
+            }
+        ]
     }
 }

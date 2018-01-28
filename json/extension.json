@@ -1,15 +1,45 @@
 {
   "Vector3": {
-
+    "attributes": [
+      {
+        "name": "x",
+        "class": "float"
+      },
+      {
+        "name": "y",
+        "class": "float"
+      },
+      {
+        "name": "z",
+        "class": "float"
+      }
+    ]
   },
   "Vector2": {
-
+    "attributes": [
+      {
+        "name": "x",
+        "class": "float"
+      },
+      {
+        "name": "y",
+        "class": "float"
+      }
+    ]
+  },
+  "String": {
+    "attributes": [
+      {
+        "name": "size",
+        "class": "UInt"
+      }
+    ]
   },
   "WString": {
-
+    "extends": "String"
   },
   "CString": {
-    
+    "extends": "String"
   },
   "Chunk": {
     "attributes": [
