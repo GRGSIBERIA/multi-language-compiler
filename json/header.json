@@ -1,0 +1,18 @@
+{
+    "Header": {
+        "attributes": [
+            {
+                "name": "title",
+                "class": "WString"
+            },
+            {
+                "name": "author",
+                "class": "WString"
+            },
+            {
+                "name": "description",
+                "class": "WString"
+            }
+        ]
+    }
+}

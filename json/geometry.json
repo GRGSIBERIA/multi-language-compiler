@@ -1,0 +1,44 @@
+{
+    "Geometry": {
+        "attributes": [
+            {
+                "name": "vertices",
+                "class": "Array",
+                "extends": "Vertex"
+            },
+            {
+                "name": "normals",
+                "class": "Array",
+                "extends": "Normal"
+            },
+            {
+                "name": "faces",
+                "class": "Array",
+                "extends": "UInt"
+            },
+            {
+                "name": "uv_sets",
+                "class": "Array",
+                "extends": "UVSet"
+            }
+        ]
+    },
+    "Vertex": {
+        "extends": "Vector3"
+    },
+    "Normal": {
+        "extends": "Vector3"
+    },
+    "UVSet": {
+        "attributes": [
+            {
+                "name": "uv",
+                "class": "Array",
+                "extends": "UV"
+            }
+        ]
+    },
+    "UV": {
+        "extends": "Vector2"
+    }
+}

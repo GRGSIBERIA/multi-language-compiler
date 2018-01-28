@@ -1,0 +1,30 @@
+{
+    "Signature": {
+        "attributes": [
+            {
+                "name": "vertex_offset",
+                "class": "UInt"
+            },
+            {
+                "name": "vertex_size",
+                "class": "UInt"
+            },
+            {
+                "name": "downloader_sign",
+                "class": "CString",
+                "size": "32"
+            },
+            {
+                "name": "server_sign",
+                "class": "CString",
+                "size": "32"
+            },
+            {
+                "name": "ring_sign",
+                "class": "Array",
+                "extends": "CString",
+                "size": "32"
+            }
+        ]
+    }
+}
