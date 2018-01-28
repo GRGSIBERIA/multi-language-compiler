@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ヘッダー ファイル\lang">
+      <UniqueIdentifier>{c9657a99-a2b4-4698-8aa6-b5bcac4a4e53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\lang">
+      <UniqueIdentifier>{110fcce4-8466-4c5a-869a-2950d73df560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\syntax">
+      <UniqueIdentifier>{b08de96a-289b-43c1-b8a0-d22fc0b1175c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\syntax">
+      <UniqueIdentifier>{8c5d2102-9cc3-49c4-86ca-6e8af82f32cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +36,45 @@
     <ClInclude Include="targetver.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Language.h">
+      <Filter>ヘッダー ファイル\lang</Filter>
+    </ClInclude>
+    <ClInclude Include="Python.h">
+      <Filter>ヘッダー ファイル\lang</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlusPlus.h">
+      <Filter>ヘッダー ファイル\lang</Filter>
+    </ClInclude>
+    <ClInclude Include="CSharp.h">
+      <Filter>ヘッダー ファイル\lang</Filter>
+    </ClInclude>
+    <ClInclude Include="Syntax.h">
+      <Filter>ヘッダー ファイル\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="Function.h">
+      <Filter>ヘッダー ファイル\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="Begin.h">
+      <Filter>ヘッダー ファイル\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="End.h">
+      <Filter>ヘッダー ファイル\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="CloseFile.h">
+      <Filter>ヘッダー ファイル\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenFile.h">
+      <Filter>ヘッダー ファイル\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="Write.h">
+      <Filter>ヘッダー ファイル\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="Read.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Class.h">
+      <Filter>ヘッダー ファイル\syntax</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -31,6 +82,45 @@
     </ClCompile>
     <ClCompile Include="mlc.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Language.cpp">
+      <Filter>ソース ファイル\lang</Filter>
+    </ClCompile>
+    <ClCompile Include="Python.cpp">
+      <Filter>ソース ファイル\lang</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlusPlus.cpp">
+      <Filter>ソース ファイル\lang</Filter>
+    </ClCompile>
+    <ClCompile Include="CSharp.cpp">
+      <Filter>ソース ファイル\lang</Filter>
+    </ClCompile>
+    <ClCompile Include="Syntax.cpp">
+      <Filter>ソース ファイル\syntax</Filter>
+    </ClCompile>
+    <ClCompile Include="Function.cpp">
+      <Filter>ソース ファイル\syntax</Filter>
+    </ClCompile>
+    <ClCompile Include="Begin.cpp">
+      <Filter>ソース ファイル\syntax</Filter>
+    </ClCompile>
+    <ClCompile Include="End.cpp">
+      <Filter>ソース ファイル\syntax</Filter>
+    </ClCompile>
+    <ClCompile Include="CloseFile.cpp">
+      <Filter>ソース ファイル\syntax</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenFile.cpp">
+      <Filter>ソース ファイル\syntax</Filter>
+    </ClCompile>
+    <ClCompile Include="Write.cpp">
+      <Filter>ソース ファイル\syntax</Filter>
+    </ClCompile>
+    <ClCompile Include="Read.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Class.cpp">
+      <Filter>ソース ファイル\syntax</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
