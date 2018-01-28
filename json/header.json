@@ -1,5 +1,6 @@
 {
     "Header": {
+        "extends": "Chunk",
         "attributes": [
             {
                 "name": "title",

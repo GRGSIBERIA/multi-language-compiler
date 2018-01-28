@@ -10,5 +10,13 @@
   },
   "CString": {
     
+  },
+  "Chunk": {
+    "attributes": [
+      {
+        "name": "size",
+        "class": "UInt"
+      }
+    ]
   }
 }

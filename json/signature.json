@@ -1,5 +1,6 @@
 {
     "Signature": {
+        "extends": "Chunk",
         "attributes": [
             {
                 "name": "vertex_offset",
