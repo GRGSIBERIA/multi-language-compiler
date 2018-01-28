@@ -7,14 +7,14 @@
                 "extends": "Vertex"
             },
             {
-                "name": "normals",
-                "class": "Array",
-                "extends": "Normal"
-            },
-            {
                 "name": "faces",
                 "class": "Array",
                 "extends": "UInt"
+            },
+            {
+                "name": "normals",
+                "class": "Array",
+                "extends": "Normal"
             },
             {
                 "name": "uv_sets",
