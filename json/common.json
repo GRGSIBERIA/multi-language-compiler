@@ -1,10 +1,10 @@
 
 [
   "Int",
-  "UInt",
   "Short",
-  "UShort",
   "Char",
+  "DWord",
+  "Word",
   "Byte",
   "Float",
   "Double",

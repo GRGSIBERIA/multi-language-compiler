@@ -1,30 +1,78 @@
 {
+    "Hash": {
+        "comments": [
+            "SHA-512のハッシュ値"
+        ],
+        "attributes": [
+            {
+                "name": "value",
+                "class": "Array",
+                "extends": "Byte",
+                "size": "32"
+            }
+        ]
+    },
     "Signature": {
         "extends": "Chunk",
         "attributes": [
             {
-                "name": "vertex_offset",
-                "class": "UInt"
+                "name": "geometry_offset",
+                "class": "DWord",
+                "comments": [
+                    "ファイルの先頭からジオメトリ部のオフセット位置"
+                ]
             },
             {
-                "name": "vertex_size",
-                "class": "UInt"
+                "name": "geometry_size",
+                "class": "DWord",
+                "comments": [
+                    "ジオメトリのバイト数"
+                ]
             },
             {
                 "name": "downloader_sign",
-                "class": "CString",
-                "size": "32"
+                "class": "Hash",
+                "comments": [
+                    "利用者の公開鍵",
+                    "利用者の秘密鍵で復号する"
+                ]
             },
             {
                 "name": "server_sign",
-                "class": "CString",
-                "size": "32"
+                "class": "Hash",
+                "comments": [
+                    "サーバの認証鍵",
+                    "復号済みの利用者の鍵を使って復号する"
+                ]
             },
             {
-                "name": "ring_sign",
+                "name": "block_chain",
                 "class": "Array",
-                "extends": "CString",
-                "size": "32"
+                "extends": "Block",
+                "comments": [
+                    "ブロックチェーン",
+                    "server_signで最初のブロックを復号する",
+                    "最後の署名は利用者の秘密鍵で復号する"
+                ]
+            }
+        ]
+    },
+    "Block": {
+        "attributes": [
+            {
+                "name": "target_ip_address",
+                "class": "DWord",
+                "comments": [
+                    "署名を持っているIPアドレス"
+                ]
+            },
+            {
+                "name": "crypted_hash",
+                "class": "Hash",
+                "comments": [
+                    "署名先の公開鍵で復号する",
+                    "復号したcrypted_hashで次のブロックを復号する"
+                ]
             }
         ]
     }
