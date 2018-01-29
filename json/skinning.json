@@ -36,7 +36,7 @@
             },
             {
                 "name": "position",
-                "class": "Float3",
+                "class": "Vector3",
                 "comments": [
                     "グローバル座標上の位置"
                 ]

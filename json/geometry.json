@@ -5,30 +5,31 @@
             {
                 "name": "vertices",
                 "class": "Array",
-                "extends": "Vertex"
+                "extends": "Vector3"
             },
             {
                 "name": "faces",
                 "class": "Array",
-                "extends": "DWord"
+                "extends": "DWord",
+                "comments": [
+                    "3つの頂点インデックスで構成",
+                    "面数 = 配列数 / 3"
+                ]
             },
             {
                 "name": "normals",
                 "class": "Array",
-                "extends": "Normal"
+                "extends": "Vector3"
             },
             {
                 "name": "uv_sets",
                 "class": "Array",
-                "extends": "UVSet"
+                "extends": "UVSet",
+                "comments": [
+                    "UVのセット, 複数定義できる"
+                ]
             }
         ]
-    },
-    "Vertex": {
-        "extends": "Float3"
-    },
-    "Normal": {
-        "extends": "Float3"
     },
     "UVSet": {
         "attributes": [
@@ -43,6 +44,6 @@
         "comments": [
             "左下原点"
         ],
-        "extends": "Float2"
+        "extends": "Vector2"
     }
 }
