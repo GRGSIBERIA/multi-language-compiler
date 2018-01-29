@@ -1,72 +1,86 @@
-{
-  "Float4": {
-    "attributes": [
-      {
-        "name": "x",
-        "class": "float"
-      },
-      {
-        "name": "y",
-        "class": "float"
-      },
-      {
-        "name": "z",
-        "class": "float"
-      },
-      {
-        "name": "w",
-        "class": "float"
-      }
-    ]
+[
+  {
+    "Float4": {
+      "attributes": [
+        {
+          "name": "x",
+          "class": "float"
+        },
+        {
+          "name": "y",
+          "class": "float"
+        },
+        {
+          "name": "z",
+          "class": "float"
+        },
+        {
+          "name": "w",
+          "class": "float"
+        }
+      ]
+    }
   },
-  "Float3": {
-    "attributes": [
-      {
-        "name": "x",
-        "class": "float"
-      },
-      {
-        "name": "y",
-        "class": "float"
-      },
-      {
-        "name": "z",
-        "class": "float"
-      }
-    ]
+  {
+    "Float3": {
+      "attributes": [
+        {
+          "name": "x",
+          "class": "float"
+        },
+        {
+          "name": "y",
+          "class": "float"
+        },
+        {
+          "name": "z",
+          "class": "float"
+        }
+      ]
+    }
   },
-  "Float2": {
-    "attributes": [
-      {
-        "name": "x",
-        "class": "float"
-      },
-      {
-        "name": "y",
-        "class": "float"
-      }
-    ]
+  {
+    "Float2": {
+      "attributes": [
+        {
+          "name": "x",
+          "class": "float"
+        },
+        {
+          "name": "y",
+          "class": "float"
+        }
+      ]
+    }
   },
-  "String": {
-    "attributes": [
-      {
-        "name": "size",
-        "class": "DWord"
-      }
-    ]
+  {
+    "String": {
+      "attributes": [
+        {
+          "name": "size",
+          "class": "DWord"
+        }
+      ]
+    }
   },
-  "WString": {
-    "extends": "String"
+  {
+    "WString": {
+      "extends": "String"
+    }
   },
-  "CString": {
-    "extends": "String"
+  {
+    "CString": {
+      "extends": "String"
+    }
   },
-  "Chunk": {
-    "attributes": [
-      {
-        "name": "size",
-        "class": "DWord"
-      }
-    ]
+  {
+    "Chunk": {
+      "attributes": [
+        {
+          "name": "size",
+          "class": "DWord"
+        }
+      ]
+    }
   }
-}
+]
