@@ -1,6 +1,6 @@
 [
   {
-    "Float4": {
+    "Float2": {
       "attributes": [
         {
           "name": "x",
@@ -8,14 +8,6 @@
         },
         {
           "name": "y",
-          "class": "float"
-        },
-        {
-          "name": "z",
-          "class": "float"
-        },
-        {
-          "name": "w",
           "class": "float"
         }
       ]
@@ -40,7 +32,7 @@
     }
   },
   {
-    "Float2": {
+    "Float4": {
       "attributes": [
         {
           "name": "x",
@@ -49,8 +41,31 @@
         {
           "name": "y",
           "class": "float"
+        },
+        {
+          "name": "z",
+          "class": "float"
+        },
+        {
+          "name": "w",
+          "class": "float"
         }
       ]
+    }
+  },
+  {
+    "Vector2": {
+      "extends": "Float2"
+    }
+  },
+  {
+    "Vector3": {
+      "extends": "Float3"
+    }
+  },
+  {
+    "Quaternion": {
+      "extends": "Float4"
     }
   },
   {
