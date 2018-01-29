@@ -10,7 +10,7 @@
             {
                 "name": "faces",
                 "class": "Array",
-                "extends": "UInt"
+                "extends": "DWord"
             },
             {
                 "name": "normals",
@@ -25,10 +25,10 @@
         ]
     },
     "Vertex": {
-        "extends": "Vector3"
+        "extends": "Float3"
     },
     "Normal": {
-        "extends": "Vector3"
+        "extends": "Float3"
     },
     "UVSet": {
         "attributes": [
@@ -40,6 +40,9 @@
         ]
     },
     "UV": {
-        "extends": "Vector2"
+        "comments": [
+            "左下原点"
+        ],
+        "extends": "Float2"
     }
 }

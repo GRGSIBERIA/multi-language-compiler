@@ -9,10 +9,6 @@
             {
                 "name": "author",
                 "class": "WString"
-            },
-            {
-                "name": "description",
-                "class": "WString"
             }
         ]
     }

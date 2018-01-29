@@ -1,0 +1,65 @@
+{
+    "Skinning": {
+        "extends": "Chunk",
+        "attributes": [
+            {
+                "name": "bones",
+                "class": "Array",
+                "extends": "Bone"
+            },
+            {
+                "name": "influented_num_bones_per_vertex",
+                "class": "DWord",
+                "comments": [
+                    "頂点あたりのウェイト数"
+                ]
+            },
+            {
+                "name": "weights",
+                "class": "Array",
+                "extends": "Weight",
+                "comments": [
+                    "ウェイトの数はinfluented_num_bones_per_vertex * vertices.size"
+                ]
+            }
+        ]
+    },
+    "Bone": {
+        "attributes": [
+            {
+                "name": "bone_name",
+                "class": "CString"
+            },
+            {
+                "name": "parent_id",
+                "class": "DWord"
+            },
+            {
+                "name": "position",
+                "class": "Float3",
+                "comments": [
+                    "グローバル座標上の位置"
+                ]
+            }
+        ]
+    },
+    "WeightSet": {
+        "attributes": [
+            {
+                "name": "weights"
+            }
+        ]
+    },
+    "Weight": {
+        "attributes": [
+            {
+                "name": "bone_id",
+                "class": "DWord"
+            },
+            {
+                "name": "value",
+                "class": "Float"
+            }
+        ]
+    }
+}

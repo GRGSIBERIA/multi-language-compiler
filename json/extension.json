@@ -1,5 +1,25 @@
 {
-  "Vector3": {
+  "Float4": {
+    "attributes": [
+      {
+        "name": "x",
+        "class": "float"
+      },
+      {
+        "name": "y",
+        "class": "float"
+      },
+      {
+        "name": "z",
+        "class": "float"
+      },
+      {
+        "name": "w",
+        "class": "float"
+      }
+    ]
+  },
+  "Float3": {
     "attributes": [
       {
         "name": "x",
@@ -15,7 +35,7 @@
       }
     ]
   },
-  "Vector2": {
+  "Float2": {
     "attributes": [
       {
         "name": "x",
@@ -31,7 +51,7 @@
     "attributes": [
       {
         "name": "size",
-        "class": "UInt"
+        "class": "DWord"
       }
     ]
   },
@@ -45,7 +65,7 @@
     "attributes": [
       {
         "name": "size",
-        "class": "UInt"
+        "class": "DWord"
       }
     ]
   }
