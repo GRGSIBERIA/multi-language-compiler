@@ -40,6 +40,14 @@
                 "comments": [
                     "グローバル座標上の位置"
                 ]
+            },
+            {
+                "name": "direction",
+                "class": "Quaternion",
+                "comments": [
+                    "グローバルから見た時のボーンの向き",
+                    "ボーンのローカル軸に相当"
+                ]
             }
         ]
     },
