@@ -1,17 +1,110 @@
 {
     "Morph": {
-
+        "attributes": [
+            {
+                "name": "target_vertex_ids",
+                "class": "Array",
+                "extends": "DWord"
+            },
+            {
+                "name": "target_uv_ids",
+                "class": "Array",
+                "extends": "DWord"
+            },
+            {
+                "name": "target_bone_ids",
+                "class": "Array",
+                "extends": "DWord"
+            },
+            {
+                "name": "target_material_ids",
+                "class": "Array",
+                "extends": "DWord"
+            },
+            {
+                "name": "vertex_morphes",
+                "class": "Array",
+                "extends": "VertexMorph"
+            },
+            {
+                "name": "uv_morphes",
+                "class": "Array",
+                "extends": "UVMorph"
+            },
+            {
+                "name": "bone_morphes",
+                "class": "Array",
+                "extends": "BoneMorph"
+            },
+            {
+                "name": "material_morphes",
+                "class": "Array",
+                "extends": "MaterialMorph"
+            }
+        ]
+    },
+    "MorphBase": {
+        "attributes": [
+            {
+                "name": "name",
+                "class": "CString"
+            }
+        ]
     },
     "VertexMorph": {
-
+        "exteds": "MorphBase",
+        "attributes": [
+            {
+                "name": "directions",
+                "class": "Array",
+                "exteds": "Vector3"
+            }
+        ]
     },
     "UVMorph": {
-
+        "exteds": "MorphBase",
+        "attributes": [
+            {
+                "name": "directions",
+                "class": "Array",
+                "exteds": "Vector2"
+            }
+        ]
     },
     "BoneMorph": {
-
+        "exteds": "MorphBase",
+        "attributes": [
+            {
+                "name": "directions",
+                "class": "Array",
+                "exteds": "Vector3"
+            }
+        ]
     },
     "MaterialMorph": {
-        
+        "exteds": "MorphBase",
+        "attributes": [
+            {
+                "name": "parameters",
+                "class": "Array",
+                "exteds": "MaterialMorphValue"
+            }
+        ]
+    },
+    "MaterialMorphValue": {
+        "attributes": [
+            {
+                "name": "material_id",
+                "class": "DWord"
+            },
+            {
+                "name": "parameter_name",
+                "class": "CString"
+            },
+            {
+                "name": "value",
+                "class": "Float"
+            }
+        ]
     }
 }
