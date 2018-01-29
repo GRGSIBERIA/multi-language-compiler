@@ -1,6 +1,27 @@
 {
     "Rigging": {
-
+        "attributes": [
+            {
+                "name": "nodes",
+                "class": "Array",
+                "extends": "Node"
+            },
+            {
+                "name": "iks",
+                "class": "Array",
+                "extends": "IK"
+            },
+            {
+                "name": "controllers",
+                "class": "Array",
+                "extends": "Controller"
+            },
+            {
+                "names": "constraints",
+                "class": "Array",
+                "extends": "Constraint"
+            }
+        ]
     },
     "RigBase": {
         "attributes": [
@@ -16,6 +37,25 @@
     },
     "Node": {
         "extends": "RigBase"
+    },
+    "IK": {
+        "extends": "RigBase",
+        "attributes": [
+            {
+                "name": "iterations",
+                "class": "DWord",
+                "comments": [
+                    "IKの計算回数"
+                ]
+            },
+            {
+                "name": "limitation_radian",
+                "class": "Float",
+                "comments": [
+                    "IKの計算1回あたりの制限確度, ラジアン"
+                ]
+            }
+        ]
     },
     "Controller": {
         "extends": "RigBase",
@@ -36,22 +76,37 @@
                     "1: Orient",
                     "2: Point",
                     "3: Aim",
-                    "4: IK",
-                    "5: Pole Vector"
+                    "4: Pole Vector",
+                    "5: IK"
                 ]
             },
             {
                 "name": "constraint_of",
                 "class": "Byte",
                 "comments": [
-                    "0: bone->node",
-                    "1: node->bone",
-                    "2: node->node",
-                    "3: node->controller",
-                    "4: controller->node",
-                    "5: controller->bone"
+                    "0: bone<-node",
+                    "1: bone<-controller",
+                    "2: node<-bone",
+                    "3: node<-node",
+                    "4: node<-controller",
+                    "5: controller<-node",
+                    "6: controller<-bone",
+                    "7: ik<-node",
+                    "8: ik<-controller",
+                    "9: bone<-ik"
                 ]
             },
+            {
+                "name": "instance",
+                "class": "ConstraintBase",
+                "comments": [
+                    "instanceの中身はconstraint_typeに準じる"
+                ]
+            }
+        ]
+    },
+    "ConstraintBase": {
+        "attributes": [
             {
                 "name": "constraint_source",
                 "class": "DWord"
@@ -59,28 +114,26 @@
             {
                 "name": "constraint_target",
                 "class": "DWord"
+            },
+            {
+                "name": "weight",
+                "class": "Float"
             }
         ]
     },
-    "ConstraintBase": {
-
-    },
     "ParentConstraint": {
-
+        "extends": "ConstraintBase"
     },
     "OrientConstraint": {
-
+        "extends": "ConstraintBase"
     },
     "PointConstraint": {
-
+        "extends": "ConstraintBase"
     },
     "AimConstraint": {
-
-    },
-    "IK": {
-
+        "extends": "ConstraintBase"
     },
     "PoleVectorConstraint": {
-        
+        "extends": "ConstraintBase"
     }
 }
