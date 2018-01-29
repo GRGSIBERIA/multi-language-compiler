@@ -1,0 +1,86 @@
+{
+    "Rigging": {
+
+    },
+    "RigBase": {
+        "attributes": [
+            {
+                "name": "name", 
+                "class": "CString"
+            },
+            {
+                "name": "position",
+                "class": "Vector3"
+            }
+        ]
+    },
+    "Node": {
+        "extends": "RigBase"
+    },
+    "Controller": {
+        "extends": "RigBase",
+        "attributes": [
+            {
+                "name": "rotation",
+                "class": "Quaternion"
+            }
+        ]
+    },
+    "Constraint": {
+        "attributes": [
+            {
+                "name": "constraint_type",
+                "class": "Byte",
+                "comments": [
+                    "0: Parent",
+                    "1: Orient",
+                    "2: Point",
+                    "3: Aim",
+                    "4: IK",
+                    "5: Pole Vector"
+                ]
+            },
+            {
+                "name": "constraint_of",
+                "class": "Byte",
+                "comments": [
+                    "0: bone->node",
+                    "1: node->bone",
+                    "2: node->node",
+                    "3: node->controller",
+                    "4: controller->node",
+                    "5: controller->bone"
+                ]
+            },
+            {
+                "name": "constraint_source",
+                "class": "DWord"
+            },
+            {
+                "name": "constraint_target",
+                "class": "DWord"
+            }
+        ]
+    },
+    "ConstraintBase": {
+
+    },
+    "ParentConstraint": {
+
+    },
+    "OrientConstraint": {
+
+    },
+    "PointConstraint": {
+
+    },
+    "AimConstraint": {
+
+    },
+    "IK": {
+
+    },
+    "PoleVectorConstraint": {
+        
+    }
+}
