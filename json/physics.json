@@ -1,0 +1,171 @@
+{
+    "Physics": {
+        "attributes": [
+
+        ]
+    },
+    "Rigidbody": {
+        "attributes": [
+            {
+                "name": "attached_bone_id",
+                "class": "UInt",
+                "comments": [
+                    "Rigidbodyを取り付けたいボーンのID"
+                ]
+            },
+            {
+                "name": "mass",
+                "class": "Float",
+                "comments": [
+                    "重量(kg)"
+                ]
+            },
+            {
+                "name": "drag",
+                "class": "Float",
+                "comments": [
+                    "空気抵抗"
+                ]
+            },
+            {
+                "name": "angular_drag",
+                "class": "Float",
+                "comments": [
+                    "回転の空気抵抗"
+                ]
+            },
+            {
+                "name": "use_gravity",
+                "class": "Byte"
+            },
+            {
+                "name": "is_kinematic",
+                "class": "Byte"
+            },
+            {
+                "name": "interpolate",
+                "class": "Byte",
+                "comments": [
+                    "0: None",
+                    "1: Interpolate",
+                    "2: Extrapolate"
+                ]
+            },
+            {
+                "name": "collision_detection",
+                "class": "Byte",
+                "comments": [
+                    "0: Discrete",
+                    "1: Continuous",
+                    "2: Continuous Dynamic"
+                ]
+            },
+            {
+                "name": "freeze_position",
+                "class": "FreezeAxes"
+            },
+            {
+                "name": "freeze_rotation",
+                "class": "FreezeAxes"
+            }
+        ]
+    },
+    "FreezeAxes": {
+        "attributes": [
+            {
+                "name": "x",
+                "class": "Byte"
+            },
+            {
+                "name": "y",
+                "class": "Byte"
+            },
+            {
+                "name": "z",
+                "class": "Byte"
+            }
+        ]
+    },
+    "Collider": {
+        "attributes": [
+            {
+                "name": "center",
+                "class": "Vector3"
+            },
+            {
+                "name": "collider_type",
+                "class": "Byte",
+                "comments": [
+                    "0: Sphere",
+                    "1: Box",
+                    "2: Capsule"
+                ]
+            },
+            {
+                "name": "size",
+                "class": "Vector3",
+                "comments": [
+                    "collider_typeに応じて，以下の順番で格納",
+                    "0: Radius, null, null",
+                    "1: Width, Height, Depth",
+                    "2: Radius, Height"
+                ]
+            }
+        ]
+    },
+    "PhysicMaterial": {
+        "attributes": [
+            {
+                "name": "name",
+                "class": "CString"
+            },
+            {
+                "name": "dynamic_friction",
+                "class": "Float",
+                "comments": [
+                    "動摩擦，0から1までの値を取る"
+                ]
+            },
+            {
+                "name": "static_friction",
+                "class": "Float",
+                "comments": [
+                    "静的摩擦，0から1までの値を取る"
+                ]
+            },
+            {
+                "name": "bounciness",
+                "class": "Float",
+                "comments": [
+                    "弾性率，0から1までの値を取る",
+                    "0は跳ね返らない，1は無損失で跳ね返る"
+                ]
+            },
+            {
+                "name": "friction_combine",
+                "class": "Byte",
+                "comments": [
+                    "衝突するオブジェクト間の摩擦",
+                    "0: Average",
+                    "1: Minimum",
+                    "2: Maximum",
+                    "3: Multiply"
+                ]
+            },
+            {
+                "name": "bounce_combine",
+                "class": "Byte",
+                "comments": [
+                    "衝突するオブジェクト間の弾力",
+                    "0: Average",
+                    "1: Minimum",
+                    "2: Maximum",
+                    "3: Multiply"
+                ]
+            }
+        ]
+    },
+    "Joint": {
+
+    }
+}
