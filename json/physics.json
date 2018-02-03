@@ -8,7 +8,7 @@
         "attributes": [
             {
                 "name": "attached_bone_id",
-                "class": "UInt",
+                "class": "DWord",
                 "comments": [
                     "Rigidbodyを取り付けたいボーンのID"
                 ]
@@ -70,7 +70,7 @@
             },
             {
                 "name": "collider_id",
-                "class": "UInt"
+                "class": "DWord"
             }
         ]
     },
@@ -121,7 +121,7 @@
             },
             {
                 "name": "physic_material_id",
-                "class": "UInt"
+                "class": "DWord"
             }
         ]
     },
@@ -181,11 +181,11 @@
         "attributes": [
             {
                 "name": "attached_rigidbody_id",
-                "class": "UInt"
+                "class": "DWord"
             },
             {
                 "name": "connected_rigidbody_id",
-                "class": "UInt"
+                "class": "DWord"
             },
             {
                 "name": "anchor",
@@ -194,6 +194,20 @@
             {
                 "name": "axis",
                 "class": "Vector3"
+            }
+        ]
+    },
+    "FixedJoint": {
+
+    },
+    "HingeJoint": {
+
+    },
+    "ConfigurableJoint": {
+        "attributes": [
+            {
+                "name": "assigned_joint_id",
+                "class": "DWord"
             },
             {
                 "name": "connected_anchor",
