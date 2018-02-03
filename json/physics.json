@@ -67,6 +67,10 @@
             {
                 "name": "freeze_rotation",
                 "class": "FreezeAxes"
+            },
+            {
+                "name": "collider_id",
+                "class": "UInt"
             }
         ]
     },
@@ -90,7 +94,11 @@
         "attributes": [
             {
                 "name": "center",
-                "class": "Vector3"
+                "class": "Vector3",
+                "comments": [
+                    "コライダーの中心位置",
+                    "Rigidbodyがアタッチされたオブジェクトのローカル座標からのオフセット"
+                ]
             },
             {
                 "name": "collider_type",
@@ -110,6 +118,10 @@
                     "1: Width, Height, Depth",
                     "2: Radius, Height"
                 ]
+            },
+            {
+                "name": "physic_material_id",
+                "class": "UInt"
             }
         ]
     },
@@ -166,6 +178,31 @@
         ]
     },
     "Joint": {
-
+        "attributes": [
+            {
+                "name": "attached_rigidbody_id",
+                "class": "UInt"
+            },
+            {
+                "name": "connected_rigidbody_id",
+                "class": "UInt"
+            },
+            {
+                "name": "anchor",
+                "class": "Vector3"
+            },
+            {
+                "name": "axis",
+                "class": "Vector3"
+            },
+            {
+                "name": "connected_anchor",
+                "class": "Vector3"
+            },
+            {
+                "name": "secondary_axis",
+                "class": "Vector3"
+            }
+        ]
     }
 }
