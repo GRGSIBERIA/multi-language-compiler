@@ -1,7 +1,41 @@
 {
     "Physics": {
         "attributes": [
-
+            {
+                "name": "rigidbodies",
+                "class": "Array",
+                "extends": "Rigidbody"
+            },
+            {
+                "name": "colliders",
+                "class": "Array",
+                "extends": "Collider"
+            },
+            {
+                "name": "physic_materials",
+                "class": "Array",
+                "extends": "PhysicMaterial"
+            },
+            {
+                "name": "springs",
+                "class": "Array",
+                "extends": "Spring"
+            },
+            {
+                "name": "motors",
+                "class": "Array",
+                "extends": "Motor"
+            },
+            {
+                "name": "limitations",
+                "class": "Array",
+                "extends": "Limitation"
+            },
+            {
+                "name": "joint_data",
+                "class": "Array",
+                "extends": "Joint"
+            }
         ]
     },
     "Rigidbody": {
@@ -177,6 +211,82 @@
             }
         ]
     },
+    "Spring": {
+        "attributes": [
+            {
+                "name": "enabled",
+                "class": "Byte"
+            },
+            {
+                "name": "spring",
+                "class": "Float"
+            },
+            {
+                "name": "damper",
+                "class": "Float"
+            },
+            {
+                "name": "target_position",
+                "class": "Float"
+            }
+        ]
+    },
+    "Motor": {
+        "attributes": [
+            {
+                "name": "enabled",
+                "class": "Byte"
+            },
+            {
+                "name": "target_velocity",
+                "class": "Float"
+            },
+            {
+                "name": "force",
+                "class": "Float"
+            },
+            {
+                "name": "free_spin",
+                "class": "Byte"
+            }
+        ]
+    },
+    "Limitation": {
+        "attributes": [
+            {
+                "name": "min",
+                "class": "Float"
+            },
+            {
+                "name": "max",
+                "class": "Float"
+            },
+            {
+                "name": "bounciness",
+                "class": "Float"
+            },
+            {
+                "name": "bounce_min_velocity",
+                "class": "Float"
+            },
+            {
+                "name": "contact_distance",
+                "class": "Float"
+            }
+        ]
+    },
+    "Break": {
+        "attributes": [
+            {
+                "name": "break_force",
+                "class": "Float"
+            },
+            {
+                "name": "break_torque",
+                "class": "Float"
+            }
+        ]
+    },
     "Joint": {
         "attributes": [
             {
@@ -194,17 +304,76 @@
             {
                 "name": "axis",
                 "class": "Vector3"
+            },
+            {
+                "name": "connected_anchor",
+                "class": "Vector3"
+            },
+            {
+                "name": "enable_collision",
+                "class": "Byte"
+            },
+            {
+                "name": "enable_preprocessing",
+                "class": "Byte"
             }
         ]
     },
     "FixedJoint": {
-
+        "attributes": [
+            {
+                "name": "break_id",
+                "class": "DWord"
+            }
+        ]
     },
     "HingeJoint": {
-
+        "attributes": [
+            {
+                "name": "spring_id",
+                "class": "DWord"
+            },
+            {
+                "name": "motor_id",
+                "class": "DWord"
+            },
+            {
+                "name": "limits_id",
+                "class": "DWord"
+            },
+            {
+                "name": "break_id",
+                "class": "DWord"
+            }
+        ]
     },
     "SpringJoint": {
-
+        "attributes": [
+            {
+                "name": "break_id",
+                "class": "DWord"
+            },
+            {
+                "name": "spring",
+                "class": "Float"
+            },
+            {
+                "name": "damper",
+                "class": "Float"
+            },
+            {
+                "name": "min_distance",
+                "class": "Float"
+            },
+            {
+                "name": "max_distance",
+                "class": "Float"
+            },
+            {
+                "name": "tolerance",
+                "class": "Float"
+            }
+        ]
     },
     "ConfigurableJoint": {
         "attributes": [
@@ -219,6 +388,10 @@
             {
                 "name": "secondary_axis",
                 "class": "Vector3"
+            },
+            {
+                "name": "break_id",
+                "class": "DWord"
             }
         ]
     }
