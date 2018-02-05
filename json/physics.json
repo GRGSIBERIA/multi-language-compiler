@@ -82,6 +82,10 @@
     "Rigidbody": {
         "attributes": [
             {
+                "name": "digest",
+                "class": "Digest"
+            },
+            {
                 "name": "attached_bone_id",
                 "class": "DWord",
                 "references": "Bone",
@@ -147,7 +151,11 @@
             {
                 "name": "collider_id",
                 "class": "DWord",
-                "references": "Collider"
+                "references": "Collider",
+                "note": [
+                    "同じ形のコライダーが複数存在することも予想される",
+                    "rigidbodyとcolliderは多対1の関係になるためrigidbodyにこの変数がある"
+                ]
             }
         ]
     },

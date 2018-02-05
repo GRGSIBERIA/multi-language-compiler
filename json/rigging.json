@@ -27,8 +27,8 @@
     "RigBase": {
         "attributes": [
             {
-                "name": "name", 
-                "class": "CString"
+                "name": "digest", 
+                "class": "Digest"
             },
             {
                 "name": "position",
@@ -77,24 +77,24 @@
                     "1: Orient",
                     "2: Point",
                     "3: Aim",
-                    "4: Pole Vector",
-                    "5: IK"
+                    "4: Pole Vector"
                 ]
             },
             {
-                "name": "constraint_of",
+                "name": "constraint_to",
                 "class": "Byte",
                 "comments": [
-                    "0: bone<-node",
-                    "1: bone<-controller",
-                    "2: node<-bone",
-                    "3: node<-node",
-                    "4: node<-controller",
-                    "5: controller<-node",
-                    "6: controller<-bone",
-                    "7: ik<-node",
-                    "8: ik<-controller",
-                    "9: bone<-ik"
+                    "ikは厳密にはcontroller扱い",
+                    "0: bone",
+                    "1: node",
+                    "2: ik",
+                    "3: controller"
+                ],
+                "attentions": [
+                    "以下の拘束は禁止",
+                    "bone -> ik",
+                    "bone -> controller",
+                    "node -> bone"
                 ]
             },
             {
@@ -105,36 +105,5 @@
                 ]
             }
         ]
-    },
-    "ConstraintBase": {
-        "attributes": [
-            {
-                "name": "constraint_source",
-                "class": "DWord"
-            },
-            {
-                "name": "constraint_target",
-                "class": "DWord"
-            },
-            {
-                "name": "weight",
-                "class": "Float"
-            }
-        ]
-    },
-    "ParentConstraint": {
-        "extends": "ConstraintBase"
-    },
-    "OrientConstraint": {
-        "extends": "ConstraintBase"
-    },
-    "PointConstraint": {
-        "extends": "ConstraintBase"
-    },
-    "AimConstraint": {
-        "extends": "ConstraintBase"
-    },
-    "PoleVectorConstraint": {
-        "extends": "ConstraintBase"
     }
 }

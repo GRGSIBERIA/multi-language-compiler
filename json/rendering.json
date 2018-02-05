@@ -24,16 +24,9 @@
             "typeはcommon.jsonの順番に準拠",
             "レンダラやシェーダの入力名を対応させる"
         ],
+        "references": ["Material"],
+        "has_a": ["Digest"],
         "attributes": [
-            {
-                "name": "material_id",
-                "class": "DWord",
-                "references": "Material"
-            },
-            {
-                "name": "digest",
-                "class": "Digest"
-            },
             {
                "name": "type",
                "class": "Byte"
@@ -41,11 +34,8 @@
         ]
     },
     "Material": {
+        "has_a": ["Digest"],
         "attributes": [
-            {
-                "name": "digest",
-                "class": "Digest"
-            },
             {
                 "name": "num_faces",
                 "class": "DWord"
