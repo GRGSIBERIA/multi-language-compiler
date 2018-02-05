@@ -1,5 +1,6 @@
 {
     "Rigging": {
+        "extends": "Chunk",
         "attributes": [
             {
                 "name": "nodes",

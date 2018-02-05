@@ -89,6 +89,14 @@
     }
   },
   {
+    "Digest": {
+      "extends": "DWord",
+      "comments": [
+        "ハッシュ関数はMurmur3を利用する"
+      ]
+    }
+  },
+  {
     "Chunk": {
       "attributes": [
         {

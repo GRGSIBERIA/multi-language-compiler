@@ -10,7 +10,7 @@
             {
                 "name": "textures",
                 "class": "Array",
-                "extends": "WString"
+                "extends": "Digest"
             },
             {
                 "name": "materials",
@@ -22,28 +22,39 @@
     "Definition": {
         "comments": [
             "typeはcommon.jsonの順番に準拠",
-            "レンダラやシェーダの入力の名前とnameは対応させる"
+            "レンダラやシェーダの入力名を対応させる"
         ],
         "attributes": [
             {
-                "name": "name",
-                "class": "CString"
+                "name": "material_id",
+                "class": "DWord",
+                "references": "Material"
+            },
+            {
+                "name": "digest",
+                "class": "Digest"
             },
             {
                "name": "type",
-               "class": "Byte" 
+               "class": "Byte"
             }
         ]
     },
     "Material": {
         "attributes": [
             {
+                "name": "digest",
+                "class": "Digest"
+            },
+            {
                 "name": "num_faces",
                 "class": "DWord"
             },
             {
-                "name": "using_definition",
-                "class": "Byte"
+                "name": "using_definitions",
+                "class": "Array",
+                "extends": "DWord",
+                "references": "Definitions"
             }
         ]
     }

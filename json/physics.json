@@ -1,5 +1,6 @@
 {
     "Physics": {
+        "extends": "Chunk",
         "attributes": [
             {
                 "name": "rigidbodies",
@@ -83,7 +84,7 @@
             {
                 "name": "attached_bone_id",
                 "class": "DWord",
-                "foreign_key": "Bone",
+                "references": "Bone",
                 "comments": [
                     "Rigidbodyを取り付けたいボーンのID"
                 ]
@@ -146,7 +147,7 @@
             {
                 "name": "collider_id",
                 "class": "DWord",
-                "foreign_key": "Collider"
+                "references": "Collider"
             }
         ]
     },
@@ -198,7 +199,7 @@
             {
                 "name": "physic_material_id",
                 "class": "DWord",
-                "foreign_key": "PhysicMaterial"
+                "references": "PhysicMaterial"
             }
         ]
     },
@@ -335,12 +336,12 @@
             {
                 "name": "attached_rigidbody_id",
                 "class": "DWord",
-                "foreign_key": "Rigidbody"
+                "references": "Rigidbody"
             },
             {
                 "name": "connected_rigidbody_id",
                 "class": "DWord",
-                "foreign_key": "Rigidbody"
+                "references": "Rigidbody"
             },
             {
                 "name": "anchor",
@@ -357,7 +358,7 @@
             {
                 "name": "break_id",
                 "class": "DWord",
-                "foreign_key": "Break"
+                "references": "Break"
             },
             {
                 "name": "enable_collision",
@@ -374,7 +375,7 @@
             {
                 "name": "joint_id",
                 "class": "DWord",
-                "foreign_key": "Joint"
+                "references": "Joint"
             }
         ]
     },
@@ -383,22 +384,22 @@
             {
                 "name": "joint_id",
                 "class": "DWord",
-                "foreign_key": "Joint"
+                "references": "Joint"
             },
             {
                 "name": "spring_id",
                 "class": "DWord",
-                "foreign_key": "Spring"
+                "references": "Spring"
             },
             {
                 "name": "motor_id",
                 "class": "DWord",
-                "foreign_key": "Motor"
+                "references": "Motor"
             },
             {
                 "name": "limitation_id",
                 "class": "DWord",
-                "foreign_key": "Limitation"
+                "references": "Limitation"
             }
         ]
     },
@@ -407,7 +408,7 @@
             {
                 "name": "joint_id",
                 "class": "DWord",
-                "foreign_key": "Joint"
+                "references": "Joint"
             },
             {
                 "name": "spring",
@@ -496,7 +497,7 @@
             {
                 "name": "joint_id",
                 "class": "DWord",
-                "foreign_key": "Joint"
+                "references": "Joint"
             },
             {
                 "name": "connected_anchor",
@@ -533,42 +534,42 @@
             {
                 "name": "linear_limit_spring_id",
                 "class": "DWord",
-                "foreign_key": "LimitSpring"
+                "references": "LimitSpring"
             },
             {
                 "name": "linear_limit_id",
                 "class": "DWord",
-                "foreign_key": "AngularLimit"
+                "references": "AngularLimit"
             },
             {
                 "name": "angular_x_limit_spring_id",
                 "class": "DWord",
-                "foreign_key": "LimitSpring"
+                "references": "LimitSpring"
             },
             {
                 "name": "low_angular_x_limit_id",
                 "class": "DWord",
-                "foreign_key": "AngularLimit"
+                "references": "AngularLimit"
             },
             {
                 "name": "high_angular_x_limit_id",
                 "class": "DWord",
-                "foreign_key": "AngularLimit"
+                "references": "AngularLimit"
             },
             {
                 "name": "angular_yz_limit_spring_id",
                 "class": "DWord",
-                "foreign_key": "LimitSpring"
+                "references": "LimitSpring"
             },
             {
                 "name": "angular_y_limit_id",
                 "class": "DWord",
-                "foreign_key": "AngularLimit"
+                "references": "AngularLimit"
             },
             {
                 "name": "angular_z_limit_id",
                 "class": "DWord",
-                "foreign_key": "AngularLimit"
+                "references": "AngularLimit"
             },
             {
                 "name": "target_position",
@@ -581,22 +582,22 @@
             {
                 "name": "angular_x_drive_id",
                 "class": "DWord",
-                "foreign_key": "AngularDrive"
+                "references": "AngularDrive"
             },
             {
                 "name": "angular_yz_drive_id",
                 "class": "DWord",
-                "foreign_key": "AngularDrive"
+                "references": "AngularDrive"
             },
             {
                 "name": "slerp_drive_id",
                 "class": "DWord",
-                "foreign_key": "AngularDrive"
+                "references": "AngularDrive"
             },
             {
                 "name": "projection_id",
                 "class": "DWord",
-                "foreign_key": "Projection"
+                "references": "Projection"
             },
             {
                 "name": "configured_in_world_space",
