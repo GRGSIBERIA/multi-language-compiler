@@ -36,14 +36,8 @@
             {
                 "name": "uv",
                 "class": "Array",
-                "extends": "UV"
+                "extends": "Vector2"
             }
         ]
-    },
-    "UV": {
-        "comments": [
-            "左下原点"
-        ],
-        "extends": "Vector2"
     }
 }
