@@ -44,12 +44,16 @@
             {
                 "name": "locale_point",
                 "class": "Byte",
-                "size": 2
+                "size": 2,
+                "comments": [
+                    "言語に応じた国コードを2バイトで表現",
+                    "ISO 639-1:2002 Alpha-2 Codeに準拠"
+                ]
             },
             {
                 "name": "names",
                 "class": "Array",
-                "extends": "CString",
+                "extends": "WString",
                 "comments": [
                     "以下の順番で翻訳名が格納",
                     "bones",
