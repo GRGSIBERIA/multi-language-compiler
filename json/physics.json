@@ -53,7 +53,7 @@
                 "extends": "Projection"
             },
             {
-                "name": "joint_data",
+                "name": "joints",
                 "class": "Array",
                 "extends": "Joint"
             },
