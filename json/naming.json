@@ -1,0 +1,73 @@
+{
+    "Locale": {
+        "extends": "Chunk",
+        "attributes": [
+            {
+                "name": "system",
+                "class": "SystemName"
+            },
+            {
+                "name": "locales",
+                "class": "Array",
+                "extends": "LocaleName"
+            }
+        ]
+    },
+    "SystemName": {
+        "attributes": [
+            {
+                "name": "names",
+                "class": "Array",
+                "extends": "CString",
+                "comments": [
+                    "以下の順番でシステム名が格納",
+                    "bones",
+                    "definitions",
+                    "materials",
+                    "textures",
+                    "vertex_morphes",
+                    "uv_morphes",
+                    "bone_morphes",
+                    "material_morphes",
+                    "nodes",
+                    "controller",
+                    "constraints",
+                    "rigidbodies",
+                    "physic_materials",
+                    "joints"
+                ]
+            }
+        ]
+    },
+    "LocaleName": {
+        "attributes": [
+            {
+                "name": "locale_point",
+                "class": "Byte",
+                "size": 2
+            },
+            {
+                "name": "names",
+                "class": "Array",
+                "extends": "CString",
+                "comments": [
+                    "以下の順番で翻訳名が格納",
+                    "bones",
+                    "definitions",
+                    "materials",
+                    "textures",
+                    "vertex_morphes",
+                    "uv_morphes",
+                    "bone_morphes",
+                    "material_morphes",
+                    "nodes",
+                    "controller",
+                    "constraints",
+                    "rigidbodies",
+                    "physic_materials",
+                    "joints"
+                ]
+            }
+        ]
+    }
+}
