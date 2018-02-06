@@ -45,12 +45,7 @@
         ]
     },
     "MorphBase": {
-        "attributes": [
-            {
-                "name": "name",
-                "class": "CString"
-            }
-        ]
+        "has_a": ["Digest"]
     },
     "VertexMorph": {
         "exteds": "MorphBase",
@@ -93,14 +88,11 @@
         ]
     },
     "MaterialMorphValue": {
+        "references": ["Material"],
         "attributes": [
             {
-                "name": "material_id",
-                "class": "DWord"
-            },
-            {
-                "name": "parameter_name",
-                "class": "CString"
+                "name": "parameter_digest",
+                "class": "Digest"
             },
             {
                 "name": "value",

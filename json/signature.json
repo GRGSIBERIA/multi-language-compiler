@@ -63,7 +63,16 @@
                 "name": "target_ip_address",
                 "class": "DWord",
                 "comments": [
-                    "署名を持っているIPアドレス"
+                    "署名者のIPアドレス"
+                ]
+            },
+            {
+                "name": "target_auth_key",
+                "class": "Hash",
+                "comments": [
+                    "署名者の認証鍵",
+                    "1つのIPアドレスで複数の署名者を管理している場合がある",
+                    "その中の誰が署名者なのかを特定するための鍵"
                 ]
             },
             {

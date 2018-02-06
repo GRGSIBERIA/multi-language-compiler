@@ -11,7 +11,7 @@
                 "name": "influented_num_bones_per_vertex",
                 "class": "DWord",
                 "comments": [
-                    "頂点あたりのウェイト数"
+                    "頂点あたりの最大ウェイト数"
                 ]
             },
             {
@@ -19,27 +19,18 @@
                 "class": "Array",
                 "extends": "Weight",
                 "comments": [
-                    "ウェイトの数はinfluented_num_bones_per_vertex * vertices.size"
+                    "ウェイトの数はinfluented_num_bones_per_vertex * vertices.size",
+                    "頂点ごとのウェイト値を定義"
                 ]
             }
         ]
     },
     "Bone": {
+        "has_a": ["Digest", "Position"],
         "attributes": [
             {
-                "name": "bone_name",
-                "class": "CString"
-            },
-            {
                 "name": "parent_id",
-                "class": "DWord"
-            },
-            {
-                "name": "position",
-                "class": "Vector3",
-                "comments": [
-                    "グローバル座標上の位置"
-                ]
+                "references": "Bone"
             },
             {
                 "name": "direction",
@@ -51,22 +42,15 @@
             }
         ]
     },
-    "WeightSet": {
-        "attributes": [
-            {
-                "name": "weights"
-            }
-        ]
-    },
     "Weight": {
+        "references": ["Bone"],
         "attributes": [
-            {
-                "name": "bone_id",
-                "class": "DWord"
-            },
             {
                 "name": "value",
-                "class": "Float"
+                "class": "Float",
+                "comments": [
+                    "ウェイト値は w = {w_n| 0 < n < 5} -> w1 + w2 + w3 + w4 = 1"
+                ]
             }
         ]
     }

@@ -25,22 +25,12 @@
         ]
     },
     "RigBase": {
-        "attributes": [
-            {
-                "name": "digest", 
-                "class": "Digest"
-            },
-            {
-                "name": "position",
-                "class": "Vector3"
-            }
-        ]
+        "has_a": ["Digest", "Position"]
     },
     "Node": {
         "extends": "RigBase"
     },
     "IK": {
-        "extends": "RigBase",
         "attributes": [
             {
                 "name": "iterations",
@@ -60,6 +50,7 @@
     },
     "Controller": {
         "extends": "RigBase",
+        "references": "IK",
         "attributes": [
             {
                 "name": "rotation",
@@ -81,27 +72,33 @@
                 ]
             },
             {
-                "name": "constraint_to",
+                "name": "type_of",
                 "class": "Byte",
                 "comments": [
                     "ikは厳密にはcontroller扱い",
                     "0: bone",
                     "1: node",
-                    "2: ik",
-                    "3: controller"
+                    "2: controller"
                 ],
                 "attentions": [
                     "以下の拘束は禁止",
-                    "bone -> ik",
-                    "bone -> controller",
                     "node -> bone"
                 ]
             },
             {
-                "name": "instance",
-                "class": "ConstraintBase",
+                "name": "constraint_from_id",
+                "class": "DWord",
                 "comments": [
-                    "instanceの中身はconstraint_typeに準じる"
+                    "拘束の元になるオブジェクトのID",
+                    "type_ofの数値による"
+                ]
+            },
+            {
+                "name": "constraint_to_id",
+                "class": "DWord",
+                "comments": [
+                    "拘束の先になるオブジェクトのID",
+                    "type_ofの数値による"
                 ]
             }
         ]
