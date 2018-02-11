@@ -43,7 +43,7 @@ module HaxeGen
         end 
 
         def initialize 
-            @pathes = Dir.glob("./json/*.json")
+            @pathes = Dir.glob("./src/json/*.json")
             @seeds = []
             for p in @pathes
                 if p.include?("common") then

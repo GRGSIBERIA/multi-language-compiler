@@ -9,7 +9,7 @@
             "type": "Ruby",
             "request": "launch",
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/main.rb",
+            "program": "${workspaceRoot}/src/main.rb",
             "pathToRDebugIDE": "C:/Users/Eiichi/.rbenv-win/shims/rdebug-ide.bat"
         },
         {

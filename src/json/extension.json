@@ -4,11 +4,11 @@
       "attributes": [
         {
           "name": "x",
-          "class": "float"
+          "class": "Float"
         },
         {
           "name": "y",
-          "class": "float"
+          "class": "Float"
         }
       ]
     }
@@ -18,15 +18,15 @@
       "attributes": [
         {
           "name": "x",
-          "class": "float"
+          "class": "Float"
         },
         {
           "name": "y",
-          "class": "float"
+          "class": "Float"
         },
         {
           "name": "z",
-          "class": "float"
+          "class": "Float"
         }
       ]
     }
@@ -36,19 +36,19 @@
       "attributes": [
         {
           "name": "x",
-          "class": "float"
+          "class": "Float"
         },
         {
           "name": "y",
-          "class": "float"
+          "class": "Float"
         },
         {
           "name": "z",
-          "class": "float"
+          "class": "Float"
         },
         {
           "name": "w",
-          "class": "float"
+          "class": "Float"
         }
       ]
     }
