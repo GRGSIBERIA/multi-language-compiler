@@ -29,7 +29,10 @@ module HaxeGen
 
     class Member
         def initialize(classData)
-            
+            classData["attributes"].each do |atr|
+                atr["name"]
+                atr["class"]
+            end 
         end
     end
 
