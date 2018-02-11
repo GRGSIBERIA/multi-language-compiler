@@ -54,6 +54,60 @@
     }
   },
   {
+    "Half2": {
+      "attributes": [
+        {
+          "name": "x",
+          "class": "Float"
+        },
+        {
+          "name": "y",
+          "class": "Float"
+        }
+      ]
+    }
+  },
+  {
+    "Half3": {
+      "attributes": [
+        {
+          "name": "x",
+          "class": "Float"
+        },
+        {
+          "name": "y",
+          "class": "Float"
+        },
+        {
+          "name": "z",
+          "class": "Float"
+        }
+      ]
+    }
+  },
+  {
+    "Half4": {
+      "attributes": [
+        {
+          "name": "x",
+          "class": "Float"
+        },
+        {
+          "name": "y",
+          "class": "Float"
+        },
+        {
+          "name": "z",
+          "class": "Float"
+        },
+        {
+          "name": "w",
+          "class": "Float"
+        }
+      ]
+    }
+  },
+  {
     "Vector2": {
       "extends": "Float2"
     }
@@ -73,6 +127,10 @@
       "attributes": [
         {
           "name": "size",
+          "class": "DWord"
+        },
+        {
+          "name": "length",
           "class": "DWord"
         }
       ]
