@@ -9,7 +9,8 @@
             "type": "Ruby",
             "request": "launch",
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/main.rb"
+            "program": "${workspaceRoot}/main.rb",
+            "pathToRDebugIDE": "C:/Users/Eiichi/.rbenv-win/shims/rdebug-ide.bat"
         },
         {
             "name": "Listen for rdebug-ide",
