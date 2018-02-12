@@ -48,42 +48,42 @@
         "has_a": ["Digest"]
     },
     "VertexMorph": {
-        "exteds": "MorphBase",
+        "extends": "MorphBase",
         "attributes": [
             {
                 "name": "directions",
                 "class": "Array",
-                "exteds": "Vector3"
+                "extends": "Vector3"
             }
         ]
     },
     "UVMorph": {
-        "exteds": "MorphBase",
+        "extends": "MorphBase",
         "attributes": [
             {
                 "name": "directions",
                 "class": "Array",
-                "exteds": "Vector2"
+                "extends": "Vector2"
             }
         ]
     },
     "BoneMorph": {
-        "exteds": "MorphBase",
+        "extends": "MorphBase",
         "attributes": [
             {
                 "name": "directions",
                 "class": "Array",
-                "exteds": "Vector3"
+                "extends": "Vector3"
             }
         ]
     },
     "MaterialMorph": {
-        "exteds": "MorphBase",
+        "extends": "MorphBase",
         "attributes": [
             {
                 "name": "parameters",
                 "class": "Array",
-                "exteds": "MaterialMorphValue"
+                "extends": "MaterialMorphValue"
             }
         ]
     },

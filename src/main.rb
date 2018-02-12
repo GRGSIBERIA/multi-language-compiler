@@ -2,7 +2,5 @@
 require "./src/generator.rb"
 require "pp"
 
-seeds = HaxeGen::SeedFiles.new
-files = HaxeGen::File.new(seeds.pathes)
-
-pp seeds.extension
+file_manager = HaxeGen::FileManager.new 
+file_manager.write()

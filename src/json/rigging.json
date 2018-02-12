@@ -18,7 +18,7 @@
                 "extends": "Controller"
             },
             {
-                "names": "constraints",
+                "name": "constraints",
                 "class": "Array",
                 "extends": "Constraint"
             }
