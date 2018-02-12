@@ -101,7 +101,7 @@ module HaxeGen
         def write(file)
             file.puts("class #{@class_name}")
             @brackets.start(file)
-            @member.each{|m| m.write(file)}
+            @member.each{|m| m.write_decl(file)}
             @brackets.end(file)
         end
     end
@@ -122,48 +122,44 @@ module HaxeGen
         def initialize
             # read writeを生成する
         end
+
+        def write(file, members)
+            members.each do |m|
+                m.write_write(file)
+            end
+        end
     end
 
     class Member
-        def initialize(attributes)
-            @attributes = attributes 
+        def initialize(member)
+            @member = member
         end
 
         public
-        def write(file)
-            if @attributes["class"] == nil then
+        def write_decl(file)
+            if @member["class"] == nil then
                 # referencesのみ持つ
-                cls = @attributes["references"]
+                cls = @member["references"]
             else 
-                cls = @attributes["class"]
+                cls = @member["class"]
             end
 
             if cls == "Array" then
-                cls += "<#{@attributes["extends"]}>"
+                cls += "<#{@member["extends"]}>"
             end
 
-            str = "\tpublic var #{@attributes["name"]}: #{cls};"
+            str = "\tpublic var #{@member["name"]}: #{cls};"
             file.puts(str)
         end
-    end
 
-    class SeedFiles
-        attr_reader :pathes, :seeds, :extension, :common
-
-        
-
-        def initialize 
-            @pathes = Dir.glob("./src/json/*.json")
-            @seeds = []
-            for p in @pathes
-                if p.include?("common") then
-                    @common = load_json(p)
-                elsif p.include?("extension") then 
-                    @extension = load_json(p)
-                else  
-                    @seeds << load_json(p)
-                end
-            end 
+        public
+        def write_write(file)
+            # 
         end
-    end 
+
+        public
+        def write_read(file)
+
+        end
+    end
 end
