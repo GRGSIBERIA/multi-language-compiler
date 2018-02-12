@@ -9,8 +9,8 @@ module HaxeGen
         def initialize(pathes)
             @haxe_files = []
             pathes.each do |f| 
-                bname = File.basename(f, ".*")
-                @haxe_files << File.open("./src/haxe/#{bname}", "w")
+                bname = ::File.basename(f, ".*")
+                @haxe_files << ::File.open("./src/haxe/#{bname}.hx", "w")
             end
         end
     end
