@@ -1,12 +1,29 @@
+{
+  "Int": {
+    "size": 4
+  },
+  "Short": {
+    "size": 2
+  },
+  "Char": {
+    "size": 1
+  },
+  "DWord": {
+    "size": 4
+  },
+  "Word": {
+    "size": 2
+  },
+  "Byte": {
+    "size": 1
+  },
+  "Float": {
+    "size": 4
+  },
+  "Double": {
+    "size": 8
+  },
+  "Array": {
 
-[
-  "Int",
-  "Short",
-  "Char",
-  "DWord",
-  "Word",
-  "Byte",
-  "Float",
-  "Double",
-  "Array"
-]
+  }
+}

@@ -1,7 +1,15 @@
 #-*- encoding: utf-8
 require "json"
 
-
+module Commentable
+    def write_comments(comments, tab, file)
+        if comments != nil then
+            comments.each do |com|
+                file.puts("#{tab}// #{com}")
+            end
+        end
+    end
+end
 
 module HaxeGen
     class FileManager
@@ -79,6 +87,8 @@ module HaxeGen
     end
 
     class Class
+        include Commentable
+
         def initialize(class_name, json)
             @brackets = Brackets.new
             @json = json
@@ -99,7 +109,14 @@ module HaxeGen
 
         public
         def write(file)
-            file.puts("class #{@class_name}")
+            write_comments(@json["comments"], "", file)
+
+            header = "class #{@class_name}"
+            if @json["extends"] != nil then 
+                header += " extends #{@json["extends"]}"
+            end
+            file.puts(header)
+
             @brackets.start(file)
             @member.each{|m| m.write_decl(file)}
             @brackets.end(file)
@@ -132,6 +149,8 @@ module HaxeGen
     end
 
     class Member
+        include Commentable
+
         def initialize(member)
             @member = member
         end
@@ -149,13 +168,16 @@ module HaxeGen
                 cls += "<#{@member["extends"]}>"
             end
 
-            str = "\tpublic var #{@member["name"]}: #{cls};"
-            file.puts(str)
+            write_comments(@member["comments"], "\t\t", file)
+            member = "\tpublic var #{@member["name"]}: #{cls};"
+            file.puts(member)
+            file.puts("")
         end
 
         public
         def write_write(file)
-            # 
+            # Std.int(value)
+            
         end
 
         public

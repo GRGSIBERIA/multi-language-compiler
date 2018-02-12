@@ -3,6 +3,12 @@
         "extends": "Chunk",
         "attributes": [
             {
+                "name": "magic_word",
+                "class": "Array",
+                "extends": "Byte",
+                "size": 3
+            },
+            {
                 "name": "title",
                 "class": "WString"
             },
