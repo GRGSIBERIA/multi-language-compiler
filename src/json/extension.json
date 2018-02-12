@@ -1,177 +1,141 @@
-[
-  {
-    "Float2": {
-      "attributes": [
-        {
-          "name": "x",
-          "class": "Float"
-        },
-        {
-          "name": "y",
-          "class": "Float"
-        }
-      ]
-    }
+{
+  "Float2": {
+    "attributes": [
+      {
+        "name": "x",
+        "class": "Float"
+      },
+      {
+        "name": "y",
+        "class": "Float"
+      }
+    ]
   },
-  {
-    "Float3": {
-      "attributes": [
-        {
-          "name": "x",
-          "class": "Float"
-        },
-        {
-          "name": "y",
-          "class": "Float"
-        },
-        {
-          "name": "z",
-          "class": "Float"
-        }
-      ]
-    }
+  "Float3": {
+    "attributes": [
+      {
+        "name": "x",
+        "class": "Float"
+      },
+      {
+        "name": "y",
+        "class": "Float"
+      },
+      {
+        "name": "z",
+        "class": "Float"
+      }
+    ]
   },
-  {
-    "Float4": {
-      "attributes": [
-        {
-          "name": "x",
-          "class": "Float"
-        },
-        {
-          "name": "y",
-          "class": "Float"
-        },
-        {
-          "name": "z",
-          "class": "Float"
-        },
-        {
-          "name": "w",
-          "class": "Float"
-        }
-      ]
-    }
+  "Float4": {
+    "attributes": [
+      {
+        "name": "x",
+        "class": "Float"
+      },
+      {
+        "name": "y",
+        "class": "Float"
+      },
+      {
+        "name": "z",
+        "class": "Float"
+      },
+      {
+        "name": "w",
+        "class": "Float"
+      }
+    ]
   },
-  {
-    "Half2": {
-      "attributes": [
-        {
-          "name": "x",
-          "class": "Float"
-        },
-        {
-          "name": "y",
-          "class": "Float"
-        }
-      ]
-    }
+  "Half2": {
+    "attributes": [
+      {
+        "name": "x",
+        "class": "Float"
+      },
+      {
+        "name": "y",
+        "class": "Float"
+      }
+    ]
   },
-  {
-    "Half3": {
-      "attributes": [
-        {
-          "name": "x",
-          "class": "Float"
-        },
-        {
-          "name": "y",
-          "class": "Float"
-        },
-        {
-          "name": "z",
-          "class": "Float"
-        }
-      ]
-    }
+  "Half3": {
+    "attributes": [
+      {
+        "name": "x",
+        "class": "Float"
+      },
+      {
+        "name": "y",
+        "class": "Float"
+      },
+      {
+        "name": "z",
+        "class": "Float"
+      }
+    ]
   },
-  {
-    "Half4": {
-      "attributes": [
-        {
-          "name": "x",
-          "class": "Float"
-        },
-        {
-          "name": "y",
-          "class": "Float"
-        },
-        {
-          "name": "z",
-          "class": "Float"
-        },
-        {
-          "name": "w",
-          "class": "Float"
-        }
-      ]
-    }
+  "Half4": {
+    "attributes": [
+      {
+        "name": "x",
+        "class": "Float"
+      },
+      {
+        "name": "y",
+        "class": "Float"
+      },
+      {
+        "name": "z",
+        "class": "Float"
+      },
+      {
+        "name": "w",
+        "class": "Float"
+      }
+    ]
   },
-  {
-    "Vector2": {
-      "extends": "Float2"
-    }
+  "Vector2": {
+    "extends": "Float2"
   },
-  {
-    "Vector3": {
-      "extends": "Float3"
-    }
+  "Vector3": {
+    "extends": "Float3"
   },
-  {
-    "Quaternion": {
-      "extends": "Float4"
-    }
+  "Quaternion": {
+    "extends": "Float4"
   },
-  {
-    "String": {
-      "attributes": [
-        {
-          "name": "size",
-          "class": "DWord"
-        },
-        {
-          "name": "length",
-          "class": "DWord"
-        }
-      ]
-    }
+  "String": {
+    "attributes": [
+      {
+        "name": "size",
+        "class": "DWord"
+      }
+    ]
   },
-  {
-    "WString": {
-      "extends": "String"
-    }
+  "WString": {
+    "extends": "String"
   },
-  {
-    "CString": {
-      "extends": "String"
-    }
+  "CString": {
+    "extends": "String"
   },
-  {
-    "Digest": {
-      "extends": "DWord",
-      "comments": [
-        "ハッシュ関数はMurmur3を利用する"
-      ]
-    }
+  "Digest": {
+    "extends": "DWord",
+    "comments": [
+      "ハッシュ関数はMurmur3を利用する"
+    ]
   },
-  {
-    "Position": {
-      "extends": "Vector3"
-    }
+  "Position": {
+    "extends": "Vector3"
   },
-  {
-    "Rotation": {
-      "extends": "Quaternion"
-    }
+  "Rotation": {
+    "extends": "Quaternion"
   },
-  {
-    "Chunk": {
-      "attributes": [
-        {
-          "name": "size",
-          "class": "DWord"
-        }
-      ]
-    }
+  "Chunk": {
+    "attributes": [
+      {
+        "name": "size",
+        "class": "DWord"
+      }
+    ]
   }
-]
+}
