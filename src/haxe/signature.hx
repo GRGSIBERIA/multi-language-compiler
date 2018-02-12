@@ -1,19 +1,19 @@
 package flx;
 class Hash
 {
-	var value: Array<Byte>;
+	public var value: Array<Byte>;
 }
 class Signature
 {
-	var geometry_offset: DWord;
-	var geometry_size: DWord;
-	var downloader_sign: Hash;
-	var server_sign: Hash;
-	var block_chain: Array<Block>;
+	public var geometry_offset: DWord;
+	public var geometry_size: DWord;
+	public var downloader_sign: Hash;
+	public var server_sign: Hash;
+	public var block_chain: Array<Block>;
 }
 class Block
 {
-	var target_ip_address: DWord;
-	var target_auth_key: Hash;
-	var crypted_hash: Hash;
+	public var target_ip_address: DWord;
+	public var target_auth_key: Hash;
+	public var crypted_hash: Hash;
 }

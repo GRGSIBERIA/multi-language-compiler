@@ -1,36 +1,36 @@
 package flx;
 class Morph
 {
-	var target_vertex_ids: Array<DWord>;
-	var target_uv_ids: Array<DWord>;
-	var target_bone_ids: Array<DWord>;
-	var target_material_ids: Array<DWord>;
-	var vertex_morphes: Array<VertexMorph>;
-	var uv_morphes: Array<UVMorph>;
-	var bone_morphes: Array<BoneMorph>;
-	var material_morphes: Array<MaterialMorph>;
+	public var target_vertex_ids: Array<DWord>;
+	public var target_uv_ids: Array<DWord>;
+	public var target_bone_ids: Array<DWord>;
+	public var target_material_ids: Array<DWord>;
+	public var vertex_morphes: Array<VertexMorph>;
+	public var uv_morphes: Array<UVMorph>;
+	public var bone_morphes: Array<BoneMorph>;
+	public var material_morphes: Array<MaterialMorph>;
 }
 class MorphBase
 {
 }
 class VertexMorph
 {
-	var directions: Array<Vector3>;
+	public var directions: Array<Vector3>;
 }
 class UVMorph
 {
-	var directions: Array<Vector2>;
+	public var directions: Array<Vector2>;
 }
 class BoneMorph
 {
-	var directions: Array<Vector3>;
+	public var directions: Array<Vector3>;
 }
 class MaterialMorph
 {
-	var parameters: Array<MaterialMorphValue>;
+	public var parameters: Array<MaterialMorphValue>;
 }
 class MaterialMorphValue
 {
-	var parameter_digest: Digest;
-	var value: Float;
+	public var parameter_digest: Digest;
+	public var value: Float;
 }

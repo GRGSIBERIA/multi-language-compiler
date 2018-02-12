@@ -1,10 +1,10 @@
 package flx;
 class Rigging
 {
-	var nodes: Array<Node>;
-	var iks: Array<IK>;
-	var controllers: Array<Controller>;
-	var constraints: Array<Constraint>;
+	public var nodes: Array<Node>;
+	public var iks: Array<IK>;
+	public var controllers: Array<Controller>;
+	public var constraints: Array<Constraint>;
 }
 class RigBase
 {
@@ -14,17 +14,17 @@ class Node
 }
 class IK
 {
-	var iterations: DWord;
-	var limitation_radian: Float;
+	public var iterations: DWord;
+	public var limitation_radian: Float;
 }
 class Controller
 {
-	var rotation: Quaternion;
+	public var rotation: Quaternion;
 }
 class Constraint
 {
-	var constraint_type: Byte;
-	var type_of: Byte;
-	var constraint_from_id: DWord;
-	var constraint_to_id: DWord;
+	public var constraint_type: Byte;
+	public var type_of: Byte;
+	public var constraint_from_id: DWord;
+	public var constraint_to_id: DWord;
 }

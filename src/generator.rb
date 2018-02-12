@@ -124,6 +124,7 @@ module HaxeGen
         end
 
         def write(file, members)
+            file.puts("\tpublic function write(file: ")
             members.each do |m|
                 m.write_write(file)
             end

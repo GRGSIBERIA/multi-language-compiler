@@ -1,16 +1,16 @@
 package flx;
 class Skinning
 {
-	var bones: Array<Bone>;
-	var influented_num_bones_per_vertex: DWord;
-	var weights: Array<Weight>;
+	public var bones: Array<Bone>;
+	public var influented_num_bones_per_vertex: DWord;
+	public var weights: Array<Weight>;
 }
 class Bone
 {
-	var parent_id: Bone;
-	var direction: Quaternion;
+	public var parent_id: Bone;
+	public var direction: Quaternion;
 }
 class Weight
 {
-	var value: Float;
+	public var value: Float;
 }

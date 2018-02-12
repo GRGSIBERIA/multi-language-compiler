@@ -1,6 +1,6 @@
 package flx;
 class Header
 {
-	var title: WString;
-	var author: WString;
+	public var title: WString;
+	public var author: WString;
 }

@@ -1,15 +1,15 @@
 package flx;
 class Locale
 {
-	var system: SystemName;
-	var locales: Array<LocaleName>;
+	public var system: SystemName;
+	public var locales: Array<LocaleName>;
 }
 class SystemName
 {
-	var names: Array<CString>;
+	public var names: Array<CString>;
 }
 class LocaleName
 {
-	var locale_point: Byte;
-	var names: Array<WString>;
+	public var locale_point: Byte;
+	public var names: Array<WString>;
 }

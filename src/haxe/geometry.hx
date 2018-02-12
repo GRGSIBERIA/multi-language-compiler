@@ -1,12 +1,12 @@
 package flx;
 class Geometry
 {
-	var vertices: Array<Vector3>;
-	var faces: Array<DWord>;
-	var normals: Array<Vector3>;
-	var uv_sets: Array<UVSet>;
+	public var vertices: Array<Vector3>;
+	public var faces: Array<DWord>;
+	public var normals: Array<Vector3>;
+	public var uv_sets: Array<UVSet>;
 }
 class UVSet
 {
-	var uv: Array<Vector2>;
+	public var uv: Array<Vector2>;
 }
