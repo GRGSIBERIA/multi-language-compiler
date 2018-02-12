@@ -4,8 +4,14 @@ require "json"
 
 module HaxeGen
     class File
-        def initialize
-            
+        attr_reader :haxe_files
+
+        def initialize(pathes)
+            @haxe_files = []
+            pathes.each do |f| 
+                bname = File.basename(f, ".*")
+                @haxe_files << File.open("./src/haxe/#{bname}", "w")
+            end
         end
     end
 
@@ -23,7 +29,7 @@ module HaxeGen
 
     class Method
         def initialize
-            
+            # read writeを生成する
         end
     end
 
@@ -41,7 +47,7 @@ module HaxeGen
 
         private
         def load_json(path)
-            f = ::File.open(path)
+            f = ::File.open(path, "r")
             j = JSON.load(f)
         end 
 
