@@ -1,39 +1,18 @@
 package flx.format;
-class Float2 extends Chunk
+class Float2 extends flx.format.Chunk
 {
 	public var x: Float;
 
 	public var y: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Float3 extends Chunk
-{
-	public var x: Float;
-
-	public var y: Float;
-
-	public var z: Float;
-
-}
-class Float4 extends Chunk
-{
-	public var x: Float;
-
-	public var y: Float;
-
-	public var z: Float;
-
-	public var w: Float;
-
-}
-class Half2 extends Chunk
-{
-	public var x: Float;
-
-	public var y: Float;
-
-}
-class Half3 extends Chunk
+class Float3 extends flx.format.Chunk
 {
 	public var x: Float;
 
@@ -41,8 +20,14 @@ class Half3 extends Chunk
 
 	public var z: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Half4 extends Chunk
+class Float4 extends flx.format.Chunk
 {
 	public var x: Float;
 
@@ -52,39 +37,150 @@ class Half4 extends Chunk
 
 	public var w: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Vector2 extends Float2
+class Half2 extends flx.format.Chunk
 {
+	public var x: Float;
+
+	public var y: Float;
+
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Vector3 extends Float3
+class Half3 extends flx.format.Chunk
 {
+	public var x: Float;
+
+	public var y: Float;
+
+	public var z: Float;
+
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Quaternion extends Float4
+class Half4 extends flx.format.Chunk
 {
+	public var x: Float;
+
+	public var y: Float;
+
+	public var z: Float;
+
+	public var w: Float;
+
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
+}
+class Vector2 extends flx.format.Float2
+{
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
+}
+class Vector3 extends flx.format.Float3
+{
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
+}
+class Quaternion extends flx.format.Float4
+{
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
 // UTF-8文字列, 0x00終端
-class WString extends Chunk
+class WString extends flx.format.Chunk
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
 // ASCII文字列, 0x00終端
-class CString extends Chunk
+class CString extends flx.format.Chunk
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
 // ハッシュ関数はMurmur3を利用する
-class Digest extends DWord
+class Digest extends flx.format.DWord
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Position extends Vector3
+class Position extends flx.format.Vector3
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Rotation extends Quaternion
+class Rotation extends flx.format.Quaternion
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Section extends Chunk
+class Section extends flx.format.Chunk
 {
 	public var size: DWord;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Chunk extends Chunk
+class Chunk extends flx.format.Chunk
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }

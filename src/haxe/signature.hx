@@ -1,11 +1,17 @@
 package flx.format;
 // SHA-512のハッシュ値
-class Hash extends Chunk
+class Hash extends flx.format.Chunk
 {
 	public var value: Array<Byte>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Signature extends Section
+class Signature extends flx.format.Section
 {
 		// ファイルの先頭からジオメトリ部のオフセット位置
 	public var geometry_offset: DWord;
@@ -26,8 +32,14 @@ class Signature extends Section
 		// 最後の署名は利用者の秘密鍵で復号する
 	public var block_chain: Array<Block>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Block extends Chunk
+class Block extends flx.format.Chunk
 {
 		// 署名者のIPアドレス
 	public var target_ip_address: DWord;
@@ -41,4 +53,10 @@ class Block extends Chunk
 		// 復号したcrypted_hashで次のブロックを復号する
 	public var crypted_hash: Hash;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }

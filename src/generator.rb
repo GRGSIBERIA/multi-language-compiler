@@ -39,7 +39,7 @@ module HaxeGen
         end
 
         def initialize()
-            @pathes = Dir.glob("./src/json/*.json")
+            @pathes = Dir.glob("./src/json/*.json").reject!{|p| p.include?("common")}
 
             @json_files = []
             @haxe_files = []
@@ -94,6 +94,7 @@ module HaxeGen
             @json = json
             @member = [] 
             @class_name = class_name
+            @method = Method.new
 
             if @json["attributes"] == nil then 
                 # メンバを持たないケース
@@ -113,40 +114,51 @@ module HaxeGen
 
             header = "class #{@class_name}"
             if @json["extends"] != nil then 
-                header += " extends #{@json["extends"]}"
+                header += " extends flx.format.#{@json["extends"]}"
             else
-                header += " extends Chunk"
+                header += " extends flx.format.Chunk"
             end 
             file.puts(header)
 
             @brackets.start(file)
             @member.each{|m| m.write_decl(file)}
-            @brackets.end(file)
+            @method.write(file, @member)
+            @brackets.close(file)
         end
     end
 
     class Brackets
         public 
-        def start(file)
-            file.puts("{")
+        def start(file, tab="")
+            file.puts("#{tab}{")
         end 
 
         public
-        def end(file)
-            file.puts("}")
+        def close(file, tab="")
+            file.puts("#{tab}}")
         end
     end
 
     class Method
         def initialize
             # read writeを生成する
+            @brackets = Brackets.new 
         end
 
         def write(file, members)
-            file.puts("\tpublic function write(bytes: BytesData")
+            file.puts("\tpublic function write(bytes: BytesData, pos: Int)")
+            @brackets.start(file, "\t")
             members.each do |m|
                 m.write_write(file)
             end
+            @brackets.close(file, "\t")
+
+            file.puts("\tpublic function read(bytes: BytesData, pos: Int)")
+            @brackets.start(file, "\t")
+            members.each do |m|
+                m.write_read(file)
+            end
+            @brackets.close(file, "\t")
         end
     end
 

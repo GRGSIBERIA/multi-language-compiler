@@ -1,5 +1,5 @@
 package flx.format;
-class Morph extends Section
+class Morph extends flx.format.Section
 {
 	public var target_vertex_ids: Array<DWord>;
 
@@ -17,34 +17,76 @@ class Morph extends Section
 
 	public var material_morphes: Array<MaterialMorph>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class MorphBase extends Chunk
+class MorphBase extends flx.format.Chunk
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class VertexMorph extends MorphBase
+class VertexMorph extends flx.format.MorphBase
 {
 	public var directions: Array<Vector3>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class UVMorph extends MorphBase
+class UVMorph extends flx.format.MorphBase
 {
 	public var directions: Array<Vector2>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class BoneMorph extends MorphBase
+class BoneMorph extends flx.format.MorphBase
 {
 	public var directions: Array<Vector3>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class MaterialMorph extends MorphBase
+class MaterialMorph extends flx.format.MorphBase
 {
 	public var parameters: Array<MaterialMorphValue>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class MaterialMorphValue extends Chunk
+class MaterialMorphValue extends flx.format.Chunk
 {
 	public var parameter_digest: Digest;
 
 	public var value: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }

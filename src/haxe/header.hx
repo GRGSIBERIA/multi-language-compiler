@@ -1,5 +1,5 @@
 package flx.format;
-class Header extends Section
+class Header extends flx.format.Section
 {
 	public var magic_word: Array<Byte>;
 
@@ -7,4 +7,10 @@ class Header extends Section
 
 	public var author: WString;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }

@@ -1,5 +1,5 @@
 package flx.format;
-class Skinning extends Section
+class Skinning extends flx.format.Section
 {
 	public var bones: Array<Bone>;
 
@@ -10,8 +10,14 @@ class Skinning extends Section
 		// 頂点ごとのウェイト値を定義
 	public var weights: Array<Weight>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Bone extends Chunk
+class Bone extends flx.format.Chunk
 {
 	public var parent_id: Bone;
 
@@ -19,10 +25,22 @@ class Bone extends Chunk
 		// ボーンのローカル軸に相当
 	public var direction: Quaternion;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Weight extends Chunk
+class Weight extends flx.format.Chunk
 {
 		// ウェイト値は w = {w_n| 0 < n < 5} -> w1 + w2 + w3 + w4 = 1
 	public var value: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }

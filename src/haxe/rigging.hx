@@ -1,5 +1,5 @@
 package flx.format;
-class Rigging extends Section
+class Rigging extends flx.format.Section
 {
 	public var nodes: Array<Node>;
 
@@ -9,14 +9,32 @@ class Rigging extends Section
 
 	public var constraints: Array<Constraint>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class RigBase extends Chunk
+class RigBase extends flx.format.Chunk
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Node extends RigBase
+class Node extends flx.format.RigBase
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class IK extends Chunk
+class IK extends flx.format.Chunk
 {
 		// IKの計算回数
 	public var iterations: DWord;
@@ -24,13 +42,25 @@ class IK extends Chunk
 		// IKの計算1回あたりの制限確度, ラジアン
 	public var limitation_radian: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Controller extends RigBase
+class Controller extends flx.format.RigBase
 {
 	public var rotation: Quaternion;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Constraint extends Chunk
+class Constraint extends flx.format.Chunk
 {
 		// 0: Parent
 		// 1: Orient
@@ -53,4 +83,10 @@ class Constraint extends Chunk
 		// type_ofの数値による
 	public var constraint_to_id: DWord;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }

@@ -1,5 +1,5 @@
 package flx.format;
-class Physics extends Section
+class Physics extends flx.format.Section
 {
 	public var rigidbodies: Array<Rigidbody>;
 
@@ -31,8 +31,14 @@ class Physics extends Section
 
 	public var configurable_joints: Array<ConfigurableJoint>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Rigidbody extends Chunk
+class Rigidbody extends flx.format.Chunk
 {
 		// Rigidbodyを取り付けたいボーンのID
 	public var attached_bone_id: Bone;
@@ -66,8 +72,14 @@ class Rigidbody extends Chunk
 
 	public var collider_id: Collider;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class FreezeAxes extends Chunk
+class FreezeAxes extends flx.format.Chunk
 {
 	public var x: Byte;
 
@@ -75,8 +87,14 @@ class FreezeAxes extends Chunk
 
 	public var z: Byte;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Collider extends Chunk
+class Collider extends flx.format.Chunk
 {
 		// コライダーの中心位置
 		// Rigidbodyがアタッチされたオブジェクトのローカル座標からのオフセット
@@ -95,8 +113,14 @@ class Collider extends Chunk
 
 	public var physic_material_id: PhysicMaterial;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class PhysicMaterial extends Chunk
+class PhysicMaterial extends flx.format.Chunk
 {
 		// 動摩擦，0から1までの値を取る
 	public var dynamic_friction: Float;
@@ -122,8 +146,14 @@ class PhysicMaterial extends Chunk
 		// 3: Multiply
 	public var bounce_combine: Byte;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Spring extends Chunk
+class Spring extends flx.format.Chunk
 {
 	public var enabled: Byte;
 
@@ -133,8 +163,14 @@ class Spring extends Chunk
 
 	public var target_position: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Motor extends Chunk
+class Motor extends flx.format.Chunk
 {
 	public var enabled: Byte;
 
@@ -144,8 +180,14 @@ class Motor extends Chunk
 
 	public var free_spin: Byte;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Limitation extends Chunk
+class Limitation extends flx.format.Chunk
 {
 	public var min: Float;
 
@@ -157,15 +199,27 @@ class Limitation extends Chunk
 
 	public var contact_distance: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Break extends Chunk
+class Break extends flx.format.Chunk
 {
 	public var break_force: Float;
 
 	public var break_torque: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Joint extends Chunk
+class Joint extends flx.format.Chunk
 {
 	public var attached_rigidbody_id: Rigidbody;
 
@@ -181,14 +235,32 @@ class Joint extends Chunk
 
 	public var enable_preprocessing: Byte;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class FixedJoint extends Chunk
+class FixedJoint extends flx.format.Chunk
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class HingeJoint extends Chunk
+class HingeJoint extends flx.format.Chunk
 {
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class SpringJoint extends Chunk
+class SpringJoint extends flx.format.Chunk
 {
 	public var spring: Float;
 
@@ -200,8 +272,14 @@ class SpringJoint extends Chunk
 
 	public var tolerance: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class AngularLimit extends Chunk
+class AngularLimit extends flx.format.Chunk
 {
 	public var limit: Float;
 
@@ -209,15 +287,27 @@ class AngularLimit extends Chunk
 
 	public var contact_distance: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class LimitSpring extends Chunk
+class LimitSpring extends flx.format.Chunk
 {
 	public var spring: Float;
 
 	public var damper: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class AngularDrive extends Chunk
+class AngularDrive extends flx.format.Chunk
 {
 	public var position_spring: Float;
 
@@ -225,8 +315,14 @@ class AngularDrive extends Chunk
 
 	public var maximum_force: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class Projection extends Chunk
+class Projection extends flx.format.Chunk
 {
 	public var projection_mode: Byte;
 
@@ -234,8 +330,14 @@ class Projection extends Chunk
 
 	public var angle: Float;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class ConfigurableJoint extends Chunk
+class ConfigurableJoint extends flx.format.Chunk
 {
 	public var connected_anchor: Vector3;
 
@@ -285,4 +387,10 @@ class ConfigurableJoint extends Chunk
 
 	public var swap_bodies: Byte;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }

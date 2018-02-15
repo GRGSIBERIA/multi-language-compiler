@@ -1,5 +1,5 @@
 package flx.format;
-class Geometry extends Section
+class Geometry extends flx.format.Section
 {
 	public var vertices: Array<Vector3>;
 
@@ -12,9 +12,21 @@ class Geometry extends Section
 		// UVのセット, 複数定義できる
 	public var uv_sets: Array<UVSet>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
-class UVSet extends Chunk
+class UVSet extends flx.format.Chunk
 {
 	public var uv: Array<Vector2>;
 
+	public function write(bytes: BytesData, pos: Int)
+	{
+	}
+	public function read(bytes: BytesData, pos: Int)
+	{
+	}
 }
