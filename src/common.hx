@@ -1,12 +1,12 @@
 package flx.format;
-import sys.io.BytesData;
+import haxe.io.Bytes;
 
 class Int {
-    public function write() {
+    public function write() : void {
         
     }
-    public function read(bytes: sys.io.BytesData, pos: sys.Int) {
-        var a = new sys.io.BytesData();
+    public function read(bytes: sys.io.Bytes, pos: sys.Int) : void {
+        
     }
 }
 class Short {
