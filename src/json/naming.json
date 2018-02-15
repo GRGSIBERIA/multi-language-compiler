@@ -1,6 +1,6 @@
 {
     "Locale": {
-        "extends": "Chunk",
+        "extends": "Section",
         "attributes": [
             {
                 "name": "system",

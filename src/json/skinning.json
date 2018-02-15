@@ -1,6 +1,6 @@
 {
     "Skinning": {
-        "extends": "Chunk",
+        "extends": "Section",
         "attributes": [
             {
                 "name": "bones",

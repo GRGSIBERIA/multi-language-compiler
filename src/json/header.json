@@ -1,6 +1,6 @@
 {
     "Header": {
-        "extends": "Chunk",
+        "extends": "Section",
         "attributes": [
             {
                 "name": "magic_word",

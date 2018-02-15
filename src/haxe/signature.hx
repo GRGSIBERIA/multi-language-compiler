@@ -1,11 +1,11 @@
-package flx;
+package flx.format;
 // SHA-512のハッシュ値
-class Hash
+class Hash extends Chunk
 {
 	public var value: Array<Byte>;
 
 }
-class Signature extends Chunk
+class Signature extends Section
 {
 		// ファイルの先頭からジオメトリ部のオフセット位置
 	public var geometry_offset: DWord;
@@ -27,7 +27,7 @@ class Signature extends Chunk
 	public var block_chain: Array<Block>;
 
 }
-class Block
+class Block extends Chunk
 {
 		// 署名者のIPアドレス
 	public var target_ip_address: DWord;

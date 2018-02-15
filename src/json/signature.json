@@ -13,7 +13,7 @@
         ]
     },
     "Signature": {
-        "extends": "Chunk",
+        "extends": "Section",
         "attributes": [
             {
                 "name": "geometry_offset",

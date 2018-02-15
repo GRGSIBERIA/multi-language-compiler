@@ -1,6 +1,6 @@
 {
     "Physics": {
-        "extends": "Chunk",
+        "extends": "Section",
         "attributes": [
             {
                 "name": "rigidbodies",

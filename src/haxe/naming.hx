@@ -1,12 +1,12 @@
-package flx;
-class Locale extends Chunk
+package flx.format;
+class Locale extends Section
 {
 	public var system: SystemName;
 
 	public var locales: Array<LocaleName>;
 
 }
-class SystemName
+class SystemName extends Chunk
 {
 		// 以下の順番でシステム名が格納
 		// bones
@@ -26,7 +26,7 @@ class SystemName
 	public var names: Array<CString>;
 
 }
-class LocaleName
+class LocaleName extends Chunk
 {
 		// 言語に応じた国コードを2バイトで表現
 		// ISO 639-1:2002 Alpha-2 Codeに準拠

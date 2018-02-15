@@ -1,5 +1,5 @@
-package flx;
-class Physics extends Chunk
+package flx.format;
+class Physics extends Section
 {
 	public var rigidbodies: Array<Rigidbody>;
 
@@ -32,7 +32,7 @@ class Physics extends Chunk
 	public var configurable_joints: Array<ConfigurableJoint>;
 
 }
-class Rigidbody
+class Rigidbody extends Chunk
 {
 		// Rigidbodyを取り付けたいボーンのID
 	public var attached_bone_id: Bone;
@@ -67,7 +67,7 @@ class Rigidbody
 	public var collider_id: Collider;
 
 }
-class FreezeAxes
+class FreezeAxes extends Chunk
 {
 	public var x: Byte;
 
@@ -76,7 +76,7 @@ class FreezeAxes
 	public var z: Byte;
 
 }
-class Collider
+class Collider extends Chunk
 {
 		// コライダーの中心位置
 		// Rigidbodyがアタッチされたオブジェクトのローカル座標からのオフセット
@@ -96,7 +96,7 @@ class Collider
 	public var physic_material_id: PhysicMaterial;
 
 }
-class PhysicMaterial
+class PhysicMaterial extends Chunk
 {
 		// 動摩擦，0から1までの値を取る
 	public var dynamic_friction: Float;
@@ -123,7 +123,7 @@ class PhysicMaterial
 	public var bounce_combine: Byte;
 
 }
-class Spring
+class Spring extends Chunk
 {
 	public var enabled: Byte;
 
@@ -134,7 +134,7 @@ class Spring
 	public var target_position: Float;
 
 }
-class Motor
+class Motor extends Chunk
 {
 	public var enabled: Byte;
 
@@ -145,7 +145,7 @@ class Motor
 	public var free_spin: Byte;
 
 }
-class Limitation
+class Limitation extends Chunk
 {
 	public var min: Float;
 
@@ -158,14 +158,14 @@ class Limitation
 	public var contact_distance: Float;
 
 }
-class Break
+class Break extends Chunk
 {
 	public var break_force: Float;
 
 	public var break_torque: Float;
 
 }
-class Joint
+class Joint extends Chunk
 {
 	public var attached_rigidbody_id: Rigidbody;
 
@@ -182,13 +182,13 @@ class Joint
 	public var enable_preprocessing: Byte;
 
 }
-class FixedJoint
+class FixedJoint extends Chunk
 {
 }
-class HingeJoint
+class HingeJoint extends Chunk
 {
 }
-class SpringJoint
+class SpringJoint extends Chunk
 {
 	public var spring: Float;
 
@@ -201,7 +201,7 @@ class SpringJoint
 	public var tolerance: Float;
 
 }
-class AngularLimit
+class AngularLimit extends Chunk
 {
 	public var limit: Float;
 
@@ -210,14 +210,14 @@ class AngularLimit
 	public var contact_distance: Float;
 
 }
-class LimitSpring
+class LimitSpring extends Chunk
 {
 	public var spring: Float;
 
 	public var damper: Float;
 
 }
-class AngularDrive
+class AngularDrive extends Chunk
 {
 	public var position_spring: Float;
 
@@ -226,7 +226,7 @@ class AngularDrive
 	public var maximum_force: Float;
 
 }
-class Projection
+class Projection extends Chunk
 {
 	public var projection_mode: Byte;
 
@@ -235,7 +235,7 @@ class Projection
 	public var angle: Float;
 
 }
-class ConfigurableJoint
+class ConfigurableJoint extends Chunk
 {
 	public var connected_anchor: Vector3;
 

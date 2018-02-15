@@ -1,6 +1,6 @@
 {
     "Geometry": {
-        "extends": "Chunk",
+        "extends": "Section",
         "attributes": [
             {
                 "name": "vertices",

@@ -1,6 +1,6 @@
 {
     "Morph": {
-        "extends": "Chunk",
+        "extends": "Section",
         "attributes": [
             {
                 "name": "target_vertex_ids",

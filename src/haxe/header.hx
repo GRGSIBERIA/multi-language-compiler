@@ -1,5 +1,5 @@
-package flx;
-class Header extends Chunk
+package flx.format;
+class Header extends Section
 {
 	public var magic_word: Array<Byte>;
 

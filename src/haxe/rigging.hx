@@ -1,5 +1,5 @@
-package flx;
-class Rigging extends Chunk
+package flx.format;
+class Rigging extends Section
 {
 	public var nodes: Array<Node>;
 
@@ -10,13 +10,13 @@ class Rigging extends Chunk
 	public var constraints: Array<Constraint>;
 
 }
-class RigBase
+class RigBase extends Chunk
 {
 }
 class Node extends RigBase
 {
 }
-class IK
+class IK extends Chunk
 {
 		// IKの計算回数
 	public var iterations: DWord;
@@ -30,7 +30,7 @@ class Controller extends RigBase
 	public var rotation: Quaternion;
 
 }
-class Constraint
+class Constraint extends Chunk
 {
 		// 0: Parent
 		// 1: Orient

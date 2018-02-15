@@ -30,8 +30,8 @@ module HaxeGen
                 p = @pathes[i]
                 if p.include?("common") then
                     #@common = f
-                elsif p.include?("extension") then 
-                    #@extension = f
+                #elsif p.include?("extension") then 
+                #    @extension = File.new(@haxe_files[i], @json_files[i])
                 else  
                     @seeds << File.new(@haxe_files[i], @json_files[i])
                 end
@@ -82,7 +82,7 @@ module HaxeGen
     class Header
         public
         def write(file)
-            file.puts("package flx;")
+            file.puts("package flx.format;")
         end
     end
 
@@ -114,7 +114,9 @@ module HaxeGen
             header = "class #{@class_name}"
             if @json["extends"] != nil then 
                 header += " extends #{@json["extends"]}"
-            end
+            else
+                header += " extends Chunk"
+            end 
             file.puts(header)
 
             @brackets.start(file)
@@ -141,7 +143,7 @@ module HaxeGen
         end
 
         def write(file, members)
-            file.puts("\tpublic function write(file: ")
+            file.puts("\tpublic function write(bytes: BytesData")
             members.each do |m|
                 m.write_write(file)
             end

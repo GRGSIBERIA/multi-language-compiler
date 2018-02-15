@@ -104,19 +104,15 @@
   "Quaternion": {
     "extends": "Float4"
   },
-  "String": {
-    "attributes": [
-      {
-        "name": "size",
-        "class": "DWord"
-      }
+  "WString": {
+    "comments": [
+      "UTF-8文字列, 0x00終端"
     ]
   },
-  "WString": {
-    "extends": "String"
-  },
   "CString": {
-    "extends": "String"
+    "comments": [
+      "ASCII文字列, 0x00終端"
+    ]
   },
   "Digest": {
     "extends": "DWord",
@@ -130,12 +126,15 @@
   "Rotation": {
     "extends": "Quaternion"
   },
-  "Chunk": {
+  "Section": {
     "attributes": [
       {
         "name": "size",
         "class": "DWord"
       }
     ]
+  },
+  "Chunk": {
+
   }
 }

@@ -1,5 +1,5 @@
-package flx;
-class Rendering extends Chunk
+package flx.format;
+class Rendering extends Section
 {
 	public var definitions: Array<Definition>;
 
@@ -10,12 +10,12 @@ class Rendering extends Chunk
 }
 // typeはcommon.jsonの順番に準拠
 // レンダラやシェーダの入力名を対応させる
-class Definition
+class Definition extends Chunk
 {
 	public var type: Byte;
 
 }
-class Material
+class Material extends Chunk
 {
 	public var num_faces: DWord;
 

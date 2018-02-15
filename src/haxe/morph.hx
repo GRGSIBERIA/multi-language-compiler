@@ -1,5 +1,5 @@
-package flx;
-class Morph extends Chunk
+package flx.format;
+class Morph extends Section
 {
 	public var target_vertex_ids: Array<DWord>;
 
@@ -18,7 +18,7 @@ class Morph extends Chunk
 	public var material_morphes: Array<MaterialMorph>;
 
 }
-class MorphBase
+class MorphBase extends Chunk
 {
 }
 class VertexMorph extends MorphBase
@@ -41,7 +41,7 @@ class MaterialMorph extends MorphBase
 	public var parameters: Array<MaterialMorphValue>;
 
 }
-class MaterialMorphValue
+class MaterialMorphValue extends Chunk
 {
 	public var parameter_digest: Digest;
 

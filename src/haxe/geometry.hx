@@ -1,5 +1,5 @@
-package flx;
-class Geometry extends Chunk
+package flx.format;
+class Geometry extends Section
 {
 	public var vertices: Array<Vector3>;
 
@@ -13,7 +13,7 @@ class Geometry extends Chunk
 	public var uv_sets: Array<UVSet>;
 
 }
-class UVSet
+class UVSet extends Chunk
 {
 	public var uv: Array<Vector2>;
 
