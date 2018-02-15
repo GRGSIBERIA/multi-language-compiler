@@ -1,6 +1,5 @@
 -cp src/haxe
 -D analyzer-optimize
--lib hxbit
 -main Main
 --no-traces
 --interp
