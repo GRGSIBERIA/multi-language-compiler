@@ -176,13 +176,12 @@ module HaxeGen
 
         public
         def write_write(file)
-            # Std.int(value)
-            
+            # w.writeByte(202)
         end
 
         public
         def write_read(file)
-
+            # var byte = i.readByte()
         end
     end
 end
