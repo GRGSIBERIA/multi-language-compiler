@@ -1,5 +1,4 @@
 -cp src/haxe
--D analyzer-optimize
 -main Main
 --no-traces
 --interp

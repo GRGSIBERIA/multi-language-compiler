@@ -1,4 +1,5 @@
 package flx.format;
+
 class Morph extends flx.format.Section
 {
 	public var target_vertex_ids: Array<DWord>;
@@ -24,6 +25,7 @@ class Morph extends flx.format.Section
 	{
 	}
 }
+
 class MorphBase extends flx.format.Chunk
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -33,6 +35,7 @@ class MorphBase extends flx.format.Chunk
 	{
 	}
 }
+
 class VertexMorph extends flx.format.MorphBase
 {
 	public var directions: Array<Vector3>;
@@ -44,6 +47,7 @@ class VertexMorph extends flx.format.MorphBase
 	{
 	}
 }
+
 class UVMorph extends flx.format.MorphBase
 {
 	public var directions: Array<Vector2>;
@@ -55,6 +59,7 @@ class UVMorph extends flx.format.MorphBase
 	{
 	}
 }
+
 class BoneMorph extends flx.format.MorphBase
 {
 	public var directions: Array<Vector3>;
@@ -66,6 +71,7 @@ class BoneMorph extends flx.format.MorphBase
 	{
 	}
 }
+
 class MaterialMorph extends flx.format.MorphBase
 {
 	public var parameters: Array<MaterialMorphValue>;
@@ -77,6 +83,7 @@ class MaterialMorph extends flx.format.MorphBase
 	{
 	}
 }
+
 class MaterialMorphValue extends flx.format.Chunk
 {
 	public var parameter_digest: Digest;

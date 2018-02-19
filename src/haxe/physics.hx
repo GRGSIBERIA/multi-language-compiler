@@ -1,4 +1,5 @@
 package flx.format;
+
 class Physics extends flx.format.Section
 {
 	public var rigidbodies: Array<Rigidbody>;
@@ -38,6 +39,7 @@ class Physics extends flx.format.Section
 	{
 	}
 }
+
 class Rigidbody extends flx.format.Chunk
 {
 		// Rigidbodyを取り付けたいボーンのID
@@ -79,6 +81,7 @@ class Rigidbody extends flx.format.Chunk
 	{
 	}
 }
+
 class FreezeAxes extends flx.format.Chunk
 {
 	public var x: Byte;
@@ -94,6 +97,7 @@ class FreezeAxes extends flx.format.Chunk
 	{
 	}
 }
+
 class Collider extends flx.format.Chunk
 {
 		// コライダーの中心位置
@@ -120,6 +124,7 @@ class Collider extends flx.format.Chunk
 	{
 	}
 }
+
 class PhysicMaterial extends flx.format.Chunk
 {
 		// 動摩擦，0から1までの値を取る
@@ -153,6 +158,7 @@ class PhysicMaterial extends flx.format.Chunk
 	{
 	}
 }
+
 class Spring extends flx.format.Chunk
 {
 	public var enabled: Byte;
@@ -170,6 +176,7 @@ class Spring extends flx.format.Chunk
 	{
 	}
 }
+
 class Motor extends flx.format.Chunk
 {
 	public var enabled: Byte;
@@ -187,6 +194,7 @@ class Motor extends flx.format.Chunk
 	{
 	}
 }
+
 class Limitation extends flx.format.Chunk
 {
 	public var min: Float;
@@ -206,6 +214,7 @@ class Limitation extends flx.format.Chunk
 	{
 	}
 }
+
 class Break extends flx.format.Chunk
 {
 	public var break_force: Float;
@@ -219,6 +228,7 @@ class Break extends flx.format.Chunk
 	{
 	}
 }
+
 class Joint extends flx.format.Chunk
 {
 	public var attached_rigidbody_id: Rigidbody;
@@ -242,6 +252,7 @@ class Joint extends flx.format.Chunk
 	{
 	}
 }
+
 class FixedJoint extends flx.format.Chunk
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -251,6 +262,7 @@ class FixedJoint extends flx.format.Chunk
 	{
 	}
 }
+
 class HingeJoint extends flx.format.Chunk
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -260,6 +272,7 @@ class HingeJoint extends flx.format.Chunk
 	{
 	}
 }
+
 class SpringJoint extends flx.format.Chunk
 {
 	public var spring: Float;
@@ -279,6 +292,7 @@ class SpringJoint extends flx.format.Chunk
 	{
 	}
 }
+
 class AngularLimit extends flx.format.Chunk
 {
 	public var limit: Float;
@@ -294,6 +308,7 @@ class AngularLimit extends flx.format.Chunk
 	{
 	}
 }
+
 class LimitSpring extends flx.format.Chunk
 {
 	public var spring: Float;
@@ -307,6 +322,7 @@ class LimitSpring extends flx.format.Chunk
 	{
 	}
 }
+
 class AngularDrive extends flx.format.Chunk
 {
 	public var position_spring: Float;
@@ -322,6 +338,7 @@ class AngularDrive extends flx.format.Chunk
 	{
 	}
 }
+
 class Projection extends flx.format.Chunk
 {
 	public var projection_mode: Byte;
@@ -337,6 +354,7 @@ class Projection extends flx.format.Chunk
 	{
 	}
 }
+
 class ConfigurableJoint extends flx.format.Chunk
 {
 	public var connected_anchor: Vector3;

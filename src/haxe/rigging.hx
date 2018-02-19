@@ -1,4 +1,5 @@
 package flx.format;
+
 class Rigging extends flx.format.Section
 {
 	public var nodes: Array<Node>;
@@ -16,6 +17,7 @@ class Rigging extends flx.format.Section
 	{
 	}
 }
+
 class RigBase extends flx.format.Chunk
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -25,6 +27,7 @@ class RigBase extends flx.format.Chunk
 	{
 	}
 }
+
 class Node extends flx.format.RigBase
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -34,6 +37,7 @@ class Node extends flx.format.RigBase
 	{
 	}
 }
+
 class IK extends flx.format.Chunk
 {
 		// IKの計算回数
@@ -49,6 +53,7 @@ class IK extends flx.format.Chunk
 	{
 	}
 }
+
 class Controller extends flx.format.RigBase
 {
 	public var rotation: Quaternion;
@@ -60,6 +65,7 @@ class Controller extends flx.format.RigBase
 	{
 	}
 }
+
 class Constraint extends flx.format.Chunk
 {
 		// 0: Parent

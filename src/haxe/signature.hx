@@ -1,4 +1,5 @@
 package flx.format;
+
 // SHA-512のハッシュ値
 class Hash extends flx.format.Chunk
 {
@@ -11,6 +12,7 @@ class Hash extends flx.format.Chunk
 	{
 	}
 }
+
 class Signature extends flx.format.Section
 {
 		// ファイルの先頭からジオメトリ部のオフセット位置
@@ -39,6 +41,7 @@ class Signature extends flx.format.Section
 	{
 	}
 }
+
 class Block extends flx.format.Chunk
 {
 		// 署名者のIPアドレス

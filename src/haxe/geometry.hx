@@ -1,4 +1,5 @@
 package flx.format;
+
 class Geometry extends flx.format.Section
 {
 	public var vertices: Array<Vector3>;
@@ -19,6 +20,7 @@ class Geometry extends flx.format.Section
 	{
 	}
 }
+
 class UVSet extends flx.format.Chunk
 {
 	public var uv: Array<Vector2>;

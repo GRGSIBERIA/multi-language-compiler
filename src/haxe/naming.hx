@@ -1,4 +1,5 @@
 package flx.format;
+
 class Locale extends flx.format.Section
 {
 	public var system: SystemName;
@@ -12,6 +13,7 @@ class Locale extends flx.format.Section
 	{
 	}
 }
+
 class SystemName extends flx.format.Chunk
 {
 		// 以下の順番でシステム名が格納
@@ -38,6 +40,7 @@ class SystemName extends flx.format.Chunk
 	{
 	}
 }
+
 class LocaleName extends flx.format.Chunk
 {
 		// 言語に応じた国コードを2バイトで表現

@@ -45,8 +45,8 @@ module HaxeGen
             @haxe_files = []
             @pathes.each do |f| 
                 bname = ::File.basename(f, ".*")
-                @haxe_files << ::File.open("./src/haxe/#{bname}.hx", "w:utf-8")
 
+                @haxe_files << ::File.open("./src/haxe/#{bname.capitalize}.hx", "w:utf-8")
                 json = ::File.open(f, "r:utf-8")
                 @json_files << JSON.load(json)
             end
@@ -110,6 +110,8 @@ module HaxeGen
 
         public
         def write(file)
+            file.puts("")
+
             write_comments(@json["comments"], "", file)
 
             header = "class #{@class_name}"
@@ -124,6 +126,7 @@ module HaxeGen
             @member.each{|m| m.write_decl(file)}
             @method.write(file, @member)
             @brackets.close(file)
+            
         end
     end
 

@@ -1,4 +1,5 @@
 package flx.format;
+
 class Header extends flx.format.Section
 {
 	public var magic_word: Array<Byte>;

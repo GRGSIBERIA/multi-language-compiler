@@ -1,4 +1,5 @@
 package flx.format;
+
 class Skinning extends flx.format.Section
 {
 	public var bones: Array<Bone>;
@@ -17,6 +18,7 @@ class Skinning extends flx.format.Section
 	{
 	}
 }
+
 class Bone extends flx.format.Chunk
 {
 	public var parent_id: Bone;
@@ -32,6 +34,7 @@ class Bone extends flx.format.Chunk
 	{
 	}
 }
+
 class Weight extends flx.format.Chunk
 {
 		// ウェイト値は w = {w_n| 0 < n < 5} -> w1 + w2 + w3 + w4 = 1

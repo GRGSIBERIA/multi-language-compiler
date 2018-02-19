@@ -1,4 +1,5 @@
 package flx.format;
+
 class Float2 extends flx.format.Chunk
 {
 	public var x: Float;
@@ -12,6 +13,7 @@ class Float2 extends flx.format.Chunk
 	{
 	}
 }
+
 class Float3 extends flx.format.Chunk
 {
 	public var x: Float;
@@ -27,6 +29,7 @@ class Float3 extends flx.format.Chunk
 	{
 	}
 }
+
 class Float4 extends flx.format.Chunk
 {
 	public var x: Float;
@@ -44,6 +47,7 @@ class Float4 extends flx.format.Chunk
 	{
 	}
 }
+
 class Half2 extends flx.format.Chunk
 {
 	public var x: Float;
@@ -57,6 +61,7 @@ class Half2 extends flx.format.Chunk
 	{
 	}
 }
+
 class Half3 extends flx.format.Chunk
 {
 	public var x: Float;
@@ -72,6 +77,7 @@ class Half3 extends flx.format.Chunk
 	{
 	}
 }
+
 class Half4 extends flx.format.Chunk
 {
 	public var x: Float;
@@ -89,6 +95,7 @@ class Half4 extends flx.format.Chunk
 	{
 	}
 }
+
 class Vector2 extends flx.format.Float2
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -98,6 +105,7 @@ class Vector2 extends flx.format.Float2
 	{
 	}
 }
+
 class Vector3 extends flx.format.Float3
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -107,6 +115,7 @@ class Vector3 extends flx.format.Float3
 	{
 	}
 }
+
 class Quaternion extends flx.format.Float4
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -116,6 +125,7 @@ class Quaternion extends flx.format.Float4
 	{
 	}
 }
+
 // UTF-8文字列, 0x00終端
 class WString extends flx.format.Chunk
 {
@@ -126,6 +136,7 @@ class WString extends flx.format.Chunk
 	{
 	}
 }
+
 // ASCII文字列, 0x00終端
 class CString extends flx.format.Chunk
 {
@@ -136,6 +147,7 @@ class CString extends flx.format.Chunk
 	{
 	}
 }
+
 // ハッシュ関数はMurmur3を利用する
 class Digest extends flx.format.DWord
 {
@@ -146,6 +158,7 @@ class Digest extends flx.format.DWord
 	{
 	}
 }
+
 class Position extends flx.format.Vector3
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -155,6 +168,7 @@ class Position extends flx.format.Vector3
 	{
 	}
 }
+
 class Rotation extends flx.format.Quaternion
 {
 	public function write(bytes: BytesData, pos: Int)
@@ -164,6 +178,7 @@ class Rotation extends flx.format.Quaternion
 	{
 	}
 }
+
 class Section extends flx.format.Chunk
 {
 	public var size: DWord;
@@ -175,6 +190,7 @@ class Section extends flx.format.Chunk
 	{
 	}
 }
+
 class Chunk extends flx.format.Chunk
 {
 	public function write(bytes: BytesData, pos: Int)
