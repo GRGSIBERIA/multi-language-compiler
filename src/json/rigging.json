@@ -50,7 +50,7 @@
     },
     "Controller": {
         "extends": "RigBase",
-        "references": "IK",
+        "references": ["IK"],
         "attributes": [
             {
                 "name": "rotation",

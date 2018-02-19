@@ -22,6 +22,8 @@ class Definition extends flx.format.Chunk
 {
 	public var type: Byte;
 
+	public var material_id: DWord;
+
 	public function write(bytes: BytesData, pos: Int)
 	{
 	}

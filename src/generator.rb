@@ -46,7 +46,7 @@ module HaxeGen
             @pathes.each do |f| 
                 bname = ::File.basename(f, ".*")
 
-                @haxe_files << ::File.open("./src/haxe/#{bname.capitalize}.hx", "w:utf-8")
+                @haxe_files << ::File.open("./flx/format/#{bname.capitalize}.hx", "w:utf-8")
                 json = ::File.open(f, "r:utf-8")
                 @json_files << JSON.load(json)
             end
@@ -106,6 +106,15 @@ module HaxeGen
                     @member << Member.new(atr)
                 end
             end
+
+            if @json["references"] != nil then 
+                for atr in @json["references"] 
+                    if atr.nil? then 
+                        next 
+                    end
+                    @member << Member.new({"name" => atr.downcase + "_id", "class" => "DWord"})
+                end
+            end 
         end
 
         public
@@ -185,7 +194,7 @@ module HaxeGen
                 cls += "<#{@member["extends"]}>"
             end
 
-            write_comments(@member["comments"], "\t\t", file)
+            write_comments(@member["comments"], "\t", file)
             member = "\tpublic var #{@member["name"]}: #{cls};"
             file.puts(member)
             file.puts("")

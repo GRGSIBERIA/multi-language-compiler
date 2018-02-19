@@ -9,12 +9,12 @@
                 "size": 3
             },
             {
-                "name": "title",
-                "class": "WString"
-            },
-            {
-                "name": "author",
-                "class": "WString"
+                "name": "enable_dword",
+                "class": "Byte",
+                "comments": [
+                    "符号なし32ビットを扱えない処理系があるため，オミットする場合は1を指定する",
+                    "ただし，本当にデータが扱えなくなるため1は非推奨とする"
+                ]
             }
         ]
     }

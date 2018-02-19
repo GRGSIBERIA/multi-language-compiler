@@ -90,6 +90,8 @@ class MaterialMorphValue extends flx.format.Chunk
 
 	public var value: Float;
 
+	public var material_id: DWord;
+
 	public function write(bytes: BytesData, pos: Int)
 	{
 	}

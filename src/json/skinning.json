@@ -53,5 +53,22 @@
                 ]
             }
         ]
+    },
+    "Limitation": {
+        "references": ["Bone"],
+        "attributes": [
+            {
+                "name": "x",
+                "class": "Byte"
+            },
+            {
+                "name": "y",
+                "class": "Byte"
+            },
+            {
+                "name": "z",
+                "class": "Byte"
+            }
+        ]
     }
 }

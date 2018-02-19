@@ -1,7 +1,15 @@
 {
-    "Locale": {
+    "Naming": {
         "extends": "Section",
         "attributes": [
+            {
+                "name": "title",
+                "class": "WString"
+            },
+            {
+                "name": "author",
+                "class": "WString"
+            },
             {
                 "name": "system",
                 "class": "SystemName"
