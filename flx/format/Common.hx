@@ -86,6 +86,6 @@ class Double implements Literal {
         this.value = bytes.readDouble();
     }
 }
-class Array {
-
+class Array implements Literal {
+    
 }
